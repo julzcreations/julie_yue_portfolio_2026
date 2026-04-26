@@ -24,19 +24,19 @@ export const personalAlsoShipped: PersonalItem[] = [
   {
     title: 'Travel Journal',
     blurb:
-      'Multi-user trip log + expense tracker. Built in a day with Claude Code under my architecture. Live.',
+      'Multi-user trip log + expense tracker. Built in a day with Claude Code under my architecture. Sign in with Google to use.',
     link: { label: 'travel-journal.julzcreations.com', href: 'https://travel-journal.julzcreations.com' },
   },
   {
     title: 'JulzOps',
     blurb:
-      'Cozy ops dashboard for my automations — "is anything broken? how much am I spending?" Next.js + Prisma + Neon.',
+      'Cozy ops dashboard for my automations — "is anything broken? how much am I spending?" Next.js + Prisma + Neon. Single-user, restricted access.',
     link: { label: 'ops.julzcreations.com', href: 'https://ops.julzcreations.com' },
   },
   {
     title: 'Market Insights',
     blurb:
-      'Daily Claude + web_search signal sweeps → Neon → Discord alerts when something groundbreaking shows up. Hourly GH Actions cron.',
+      'Daily Claude + web_search signal sweeps → Neon → Discord alerts when something groundbreaking shows up. Hourly GH Actions cron. Single-user, restricted access.',
     link: { label: 'insights.julzcreations.com', href: 'https://insights.julzcreations.com' },
   },
   {

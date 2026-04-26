@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <rect width="64" height="64" rx="12" fill="#0a0e2b"/>
-  <text x="32" y="46"
+  <text x="32" y="49"
         text-anchor="middle"
         font-family="Fraunces, Georgia, 'Times New Roman', serif"
-        font-size="46"
-        font-weight="500"
-        font-style="italic"
-        fill="#fef9ed">j</text>
-  <circle cx="32" cy="11" r="2.4" fill="#fcd34d"/>
+        font-size="48"
+        font-weight="700"
+        fill="#fef9ed">&#x0237;</text>
+  <circle cx="32" cy="15" r="4" fill="#fcd34d"/>
 </svg>

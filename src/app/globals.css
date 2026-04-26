@@ -41,7 +41,7 @@
   }
 
   body {
-    background: radial-gradient(ellipse at 20% 10%, #1e1b4b 0%, #0a0e2b 55%);
+    background: #0a0e2b;
     color: var(--cream);
     font-family: var(--font-zen-kaku), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;

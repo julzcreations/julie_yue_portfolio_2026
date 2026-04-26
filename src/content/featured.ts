@@ -14,25 +14,25 @@ export const featuredCards: FeaturedCard[] = [
   {
     number: '01',
     title: 'Swirl Series Ecosystem',
-    subtitle: 'AI content pipeline for Swirlie · architect + director + reviewer',
+    subtitle: 'Opus reasons · Sonnet writes · Haiku sees · 12 reels, ~$5/month',
     problem:
-      'Writing Instagram scripts blind doesn’t scale. Auto-publishing garbage is worse than posting nothing.',
+      'A coffee Instagram from a cold start. 100 views per reel, no playbook for what works. The pipeline is how I figure out what to try.',
     approach:
-      'A daily GitHub Actions cron reconciles posted reels with a Notion calendar, pulls fresh Instagram metrics on every run, and on script-generation days runs a two-model Claude pipeline — Opus analyst reasons over performance data, Sonnet writer drafts the next script. Hard $2/run cost ceiling (typical: $0.065). Human-in-the-loop on every output; a drafting assistant, not an auto-publisher.',
+      'A daily GitHub Actions cron reconciles posted reels with my Notion calendar and refreshes Instagram metrics on every run. Three times a week the pipeline produces a strategic brief from past performance, three voice variations of the next script, and a 15-frame visual-arc analysis of the latest post. Idempotent, ~$5/month operating cost — a drafting assistant, not an auto-publisher.',
     outcome:
-      '9 reels reconciled in production. Concrete retention insight from a paired A/B (Reel 5 → Reel 6): first-frame app reveals drop retention 71%. Informs every subsequent script — no more opening on an app screen.',
+      '12 reels through. The literal scripts are starting points I deviate from. The analysis layer underneath — pattern reads, algorithm signal, strategic framing — is what compounds.',
     honestNote:
-      'I designed the pipeline, chose the two-model split, set the cost ceiling, and review every output before it ships. Python implemented by Claude Code under my design — I don’t write Python day-to-day.',
+      'I designed the pipeline, chose the Opus + Sonnet + Haiku model routing, and set the cost ceiling. Python implemented by Claude Code under my design — I don’t write Python day-to-day.',
     stack: [
-      'Python',
+      'Anthropic SDK (Opus + Sonnet + Haiku)',
       'GitHub Actions',
-      'Anthropic SDK (Opus + Sonnet)',
       'Instagram Graph API',
       'Notion API',
+      'Python',
       'ffmpeg',
-      'Claude vision',
     ],
     links: [
+      { label: 'GitHub', href: 'https://github.com/julzcreations/swirl-series-automation', external: true },
       { label: '@jellieglass on Instagram', href: 'https://www.instagram.com/jellieglass', external: true },
     ],
   },

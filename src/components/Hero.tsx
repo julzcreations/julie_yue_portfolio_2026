@@ -1,3 +1,39 @@
+'use client'
+
+import type { MouseEvent } from 'react'
+
+function handleScrollClick(event: MouseEvent<HTMLAnchorElement>) {
+  const href = event.currentTarget.getAttribute('href')
+  if (!href || !href.startsWith('#')) return
+  const target = document.querySelector(href) as HTMLElement | null
+  if (!target) return
+  event.preventDefault()
+
+  // Respect reduced-motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    target.scrollIntoView({ behavior: 'auto', block: 'start' })
+    return
+  }
+
+  const start = window.scrollY
+  const targetY = target.getBoundingClientRect().top + start
+  const distance = targetY - start
+  const duration = 1400 // ms — deliberate, slower than browser default
+
+  const startTime = performance.now()
+
+  function step(now: number) {
+    const elapsed = now - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    // Sine ease-in-out — gentle acceleration + deceleration
+    const eased = 0.5 * (1 - Math.cos(Math.PI * progress))
+    window.scrollTo({ top: start + distance * eased, behavior: 'auto' })
+    if (progress < 1) requestAnimationFrame(step)
+  }
+
+  requestAnimationFrame(step)
+}
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -82,6 +118,7 @@ export default function Hero() {
 
           <a
             href="#work"
+            onClick={handleScrollClick}
             aria-label="Scroll to featured work"
             className="reveal reveal-5 mt-20 inline-flex flex-col items-start gap-3 text-[0.78rem] uppercase tracking-[0.25em] text-cream/70 transition-colors hover:text-sky"
           >

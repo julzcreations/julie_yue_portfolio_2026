@@ -38,47 +38,44 @@ export const featuredCards: FeaturedCard[] = [
   },
   {
     number: '02',
-    title: 'Galls AI Shopping Drawer',
-    subtitle: 'Algolia Agent Studio integration · sole frontend developer',
+    title: 'ig-stats',
+    subtitle: 'Multi-account Instagram MCP server with two transports',
     problem:
-      'Galls customers describe use cases ("duty belt for a deputy"), not SKUs. The search bar wasn’t built for intent-translation.',
+      'My Swirl Series content pipeline needed Claude Code to read Instagram metrics across two accounts (jellieglass for Swirlie content, julzevias for personal). I wanted the same tool surface available locally (stdio) AND in claude.ai (remote). Existing MCPs didn’t cover Instagram, so I built one.',
     approach:
-      'Built a floating chat drawer backed by Algolia Agent Studio, streaming responses via Server-Sent Events through a /cgbcagent backend proxy. AgentStudioChat ES6 class architecture, brand-aware styling for both Galls and USPT via shared utilities, 30-min localStorage session persistence. Shipped UI + integration in a single feature branch.',
+      'Designed two transports for the same tool surface. Python/stdio (ig-stats-mcp): runs locally under Claude Code, smart token refresh on startup (re-auths only if token ≥ 25 days old), optional Fly.io HTTP mode with bearer auth. Cloudflare Workers (ig-stats-cf): exposes the MCP via Durable Objects for session persistence, secrets stored in Workers secrets (not .env), URL-path auth scheme returning 404 on mismatch. Same 4 read-only tools on both: ig_list_reels, ig_get_insights, ig_get_insights_bulk (parallel), ig_top_reels (metric-sorted). Multi-account routing via account param.',
     outcome:
-      'Built and staged. Held for accuracy review before rollout — production AI engineering at scale includes knowing when not to ship. Feature remains staged and functional.',
+      'Both transports running and registered. The Python server is consumed by Claude Code in my Swirl Series workflow; the CF Workers version is the deployable form for claude.ai’s custom connector. Same code shape, different runtime. The retention insights surfaced in card 01 came through these tools.',
     honestNote:
-      'Hallucination-risk holds are the standard shape of real-world AI rollouts — the review process doing its job, not a failure.',
+      'I designed the two-transport architecture, the tool surface, the security model, and the account routing. Claude Code implemented the TypeScript and Python under my direction. Reading the implementation is on my pre-launch interview-prep list.',
     stack: [
-      'Vanilla JS (ES6)',
-      'Server-Sent Events',
-      'Algolia Agent Studio',
-      'BEM CSS',
-      'localStorage session state',
-      'Brand-aware style resolution',
+      'Python',
+      'TypeScript',
+      'Cloudflare Workers + Durable Objects',
+      '@modelcontextprotocol/sdk',
+      'Zod',
+      'Instagram Graph API',
+      'Fly.io',
     ],
   },
   {
     number: '03',
-    title: 'Galls Location Tracker',
-    subtitle: 'Geo-aware e-commerce personalization framework',
+    title: 'Galls AI Shopping Drawer',
+    subtitle: 'Algolia Chat integration for tactical-gear shopping · staged, held by AI-output review',
     problem:
-      'Galls ships gear to law enforcement in all 50 states. Delivery times vary. Some states restrict specific products (PFAS regulations, California Prop 65). Conversion depends on showing accurate delivery dates and state-appropriate inventory before checkout commit.',
+      'Galls customers describe use cases ("duty belt for a deputy"), not SKUs. The search bar wasn’t built for intent translation, and a generic AI chat carries hallucination risk on tactical gear used in life-safety contexts.',
     approach:
-      'Dual-API geolocation cascade — IPWhoIs for initial IP-based detection, PositionStack for user-entered ZIP geocoding, browser geolocation as fallback. GeoLocationTracking ES6 class manages the cascade + localStorage caching. Custom userLocationUpdated event fires when state resolves; downstream consumers (est-delivery-date, shipping-restriction) listen and recompute independently.',
+      'Integrated Algolia’s InstantSearch Chat widget into a custom slide-up drawer for Galls + USPT — Varify-gated A/B test, multi-brand detection, ESM-only widget loaded via dynamic import. Built the landing UX (category pills, help links, search-to-chat handoff), product card templates with GA4 impression + click tracking, day-based conversation refresh, cross-page ATC attribution, and iOS keyboard + scroll polish. Separately prototyped a Haiku-powered pre-screening agent in front of the main shopping agent — determined the safety-label set and fallback copy — but scrapped the routing layer when DOM-streaming made it the wrong architectural shape.',
     outcome:
-      'Powers ZIP-based keyword content, PFAS state restrictions, and EDD/EST-driven shopping across product pages. The estimated-delivery-date A/B test won and rolled out to 100% of traffic.',
+      'Working on staging, A/B-gated for the Galls audience. Held from production by the business after AI-output review. Production AI engineering at scale includes knowing when not to ship a feature — and on the prototyped layer, knowing when not to ship a layer.',
+    honestNote:
+      'This is integration craftsmanship — Algolia owns the streaming, the model, and the chat mechanics. My work was the production shell (multi-tenant, A/B-gated, instrumented, polished) and the architectural exploration around safety routing. The held-from-production decision was the right call; production AI is harder than ship-it engineering.',
     stack: [
-      'Vanilla JS (ES6)',
-      'IPWhoIs API',
-      'PositionStack API',
-      'Browser geolocation',
-      'Custom event bus',
-      'localStorage',
+      'Algolia InstantSearch Chat',
+      'Algolia Agent Studio',
+      'Haiku (prototyped pre-screening)',
+      'Vanilla JS / ES6',
       'BEM CSS',
-    ],
-    links: [
-      { label: 'Galls.com', href: 'https://www.galls.com', external: true },
-      { label: 'U.S. Patriot Tactical', href: 'https://www.uspatriottactical.com', external: true },
     ],
   },
   {
@@ -107,24 +104,26 @@ export const featuredCards: FeaturedCard[] = [
   },
   {
     number: '05',
-    title: 'ig-stats',
-    subtitle: 'Multi-account Instagram MCP server with two transports',
+    title: 'Galls Location Tracker',
+    subtitle: 'Geo-aware e-commerce personalization framework',
     problem:
-      'My Swirl Series content pipeline needed Claude Code to read Instagram metrics across two accounts (jellieglass for Swirlie content, julzevias for personal). I wanted the same tool surface available locally (stdio) AND in claude.ai (remote). Existing MCPs didn’t cover Instagram, so I built one.',
+      'Galls ships gear to law enforcement in all 50 states. Delivery times vary. Some states restrict specific products (PFAS regulations, California Prop 65). Conversion depends on showing accurate delivery dates and state-appropriate inventory before checkout commit.',
     approach:
-      'Designed two transports for the same tool surface. Python/stdio (ig-stats-mcp): runs locally under Claude Code, smart token refresh on startup (re-auths only if token ≥ 25 days old), optional Fly.io HTTP mode with bearer auth. Cloudflare Workers (ig-stats-cf): exposes the MCP via Durable Objects for session persistence, secrets stored in Workers secrets (not .env), URL-path auth scheme returning 404 on mismatch. Same 4 read-only tools on both: ig_list_reels, ig_get_insights, ig_get_insights_bulk (parallel), ig_top_reels (metric-sorted). Multi-account routing via account param.',
+      'Dual-API geolocation cascade — IPWhoIs for initial IP-based detection, PositionStack for user-entered ZIP geocoding, browser geolocation as fallback. GeoLocationTracking ES6 class manages the cascade + localStorage caching. Custom userLocationUpdated event fires when state resolves; downstream consumers (est-delivery-date, shipping-restriction) listen and recompute independently.',
     outcome:
-      'Both transports running and registered. The Python server is consumed by Claude Code in my Swirl Series workflow; the CF Workers version is the deployable form for claude.ai’s custom connector. Same code shape, different runtime. The retention insights surfaced in card 01 came through these tools.',
-    honestNote:
-      'I designed the two-transport architecture, the tool surface, the security model, and the account routing. Claude Code implemented the TypeScript and Python under my direction. Reading the implementation is on my pre-launch interview-prep list.',
+      'Powers ZIP-based keyword content, PFAS state restrictions, and EDD/EST-driven shopping across product pages. The estimated-delivery-date A/B test won and rolled out to 100% of traffic.',
     stack: [
-      'Python',
-      'TypeScript',
-      'Cloudflare Workers + Durable Objects',
-      '@modelcontextprotocol/sdk',
-      'Zod',
-      'Instagram Graph API',
-      'Fly.io',
+      'Vanilla JS (ES6)',
+      'IPWhoIs API',
+      'PositionStack API',
+      'Browser geolocation',
+      'Custom event bus',
+      'localStorage',
+      'BEM CSS',
+    ],
+    links: [
+      { label: 'Galls.com', href: 'https://www.galls.com', external: true },
+      { label: 'U.S. Patriot Tactical', href: 'https://www.uspatriottactical.com', external: true },
     ],
   },
 ]

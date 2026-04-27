@@ -94,6 +94,66 @@ export default function FeaturedWork() {
           to { opacity: 1; transform: translateY(0); }
         }`}</style>
       </div>
+
+      {/* Personal projects footer — slim reference so smaller side projects
+          aren't buried under the enterprise-leaning featured cards. */}
+      <div className="mt-16 border-t border-cream/15 pt-8">
+        <p className="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-cream/65">
+          More personal projects
+        </p>
+        <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem] text-cream/75">
+          <li>
+            <a
+              href="https://github.com/julzcreations/travel-journal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky underline-offset-4 transition-colors hover:underline"
+            >
+              Travel Journal
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/julzcreations/julzops"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky underline-offset-4 transition-colors hover:underline"
+            >
+              JulzOps
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/julzcreations/market-insights"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky underline-offset-4 transition-colors hover:underline"
+            >
+              Market Insights
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/julzcreations/closet-stories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky underline-offset-4 transition-colors hover:underline"
+            >
+              Closet Stories <span className="text-cream/45">(App Store)</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/julzcreations"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky underline-offset-4 transition-colors hover:underline"
+            >
+              see all on GitHub →
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   )
 }
@@ -104,8 +164,8 @@ function tabLabel(fullTitle: string): string {
     'Swirl Series Ecosystem': 'Swirl Series',
     'Galls AI Shopping Drawer': 'AI Drawer',
     'Galls Location Tracker': 'Location Tracker',
-    'Galls Tooling + Integrations': 'Tooling + Glue',
-    'ig-stats': 'ig-stats',
+    'Galls Tooling + Integrations': 'Galls Integrations',
+    'IG-Stats MCP': 'IG-Stats MCP',
   }
   return map[fullTitle] ?? fullTitle
 }

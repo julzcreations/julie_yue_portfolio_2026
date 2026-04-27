@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero'
 import FeaturedWork from '@/components/FeaturedWork'
-import AlsoShipped from '@/components/AlsoShipped'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
@@ -11,7 +10,6 @@ export default function Home() {
     <main>
       <Hero />
       <FeaturedWork />
-      <AlsoShipped />
       <About />
       <Experience />
       <Skills />

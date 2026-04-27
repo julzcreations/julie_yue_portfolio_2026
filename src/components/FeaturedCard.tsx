@@ -60,12 +60,17 @@ export default function FeaturedCard({ card }: Props) {
 }
 
 function CardSection({ label, body }: { label: string; body: string }) {
+  const paragraphs = body.split('\n\n').filter((p) => p.trim().length > 0)
   return (
     <div>
       <span className="mb-1.5 block text-[0.78rem] font-semibold uppercase tracking-[0.15em] text-cream/65">
         {label}
       </span>
-      <p>{body}</p>
+      {paragraphs.map((para, i) => (
+        <p key={i} className={i > 0 ? 'mt-4' : undefined}>
+          {para}
+        </p>
+      ))}
     </div>
   )
 }

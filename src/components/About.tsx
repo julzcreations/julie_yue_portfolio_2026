@@ -17,9 +17,12 @@ export default function About() {
           last two, shipping with AI. I design systems; Claude writes them under my architecture.
         </p>
         <p>
-          Sole frontend on two Galls brands during the second half of 2025 — the year our
-          department beat revenue target by ~$600K. On my own time I build small AI-integrated
-          tools for myself. Products that feel handmade, ship fast, run lean.
+          E-commerce frontend at Galls and its sub-brands. Off-hours, small AI-integrated
+          tools — products that feel handmade, ship fast, run lean.
+        </p>
+        <p>
+          When I&apos;m not at my keyboard, I&apos;m probably pulling a latte, cooking
+          something, watering plants, being supervised by two cats, or off traveling.
         </p>
       </div>
     </section>

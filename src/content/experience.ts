@@ -8,7 +8,7 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    title: 'Full-Stack E-commerce Engineer',
+    title: 'Senior Frontend Engineer',
     company: 'Galls LLC',
     period: 'Feb 2026 – present',
     stack: 'Next.js · TypeScript · Cloudflare Workers · BigCommerce · Catalyst · Makeswift · Tailwind',

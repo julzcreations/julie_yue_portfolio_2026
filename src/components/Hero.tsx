@@ -78,7 +78,7 @@ export default function Hero() {
       />
 
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1080px] flex-col px-6 pb-20 pt-12 sm:px-12">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1080px] flex-col px-6 pb-32 pt-12 sm:px-12">
         {/* Top nav */}
         <nav className="mb-32 flex items-baseline justify-between">
           <span
@@ -150,7 +150,7 @@ export default function Hero() {
       {/* Floating scroll-to-work arrow — pinned to viewport bottom, aligned with the content column */}
       <div
         aria-hidden={!arrowVisible}
-        className={`pointer-events-none fixed inset-x-0 bottom-6 z-30 transition-opacity duration-500 ${
+        className={`pointer-events-none fixed inset-x-0 bottom-2 z-30 transition-opacity duration-500 ${
           arrowVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >

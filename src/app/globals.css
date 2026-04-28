@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --bg-deep: #0a0e2b;
-    --bg-mid: #1e1b4b;
-    --bg-warm: #2a1b5a;
-    --paper: #fffefc;
-    --paper-warm: #fff8e0;
-    --ink: #12163a;
-    --cream: #fef9ed;
-    --sky: #7dd3fc;
-    --fuchsia: #f0abfc;
-    --amber: #fcd34d;
-    --emerald: #6ee7b7;
-    --violet: #c4b5fd;
+    --bg-deep: #fef3ec;
+    --bg-mid: #fde8dc;
+    --bg-warm: #fef0e6;
+    --paper: #fffdf7;
+    --paper-warm: #fef9ee;
+    --ink: #3a2a4a;
+    --cream: #3a2a4a;
+    --sky: #9d4d6e;
+    --fuchsia: #fda4af;
+    --amber: #f59e0b;
+    --emerald: #bbf7d0;
+    --violet: #ddd6fe;
     --pink: #fbcfe8;
-    --accent-navy: #1e3a8a;
+    --accent-navy: #7a3b5c;
   }
 
   /* Bump base font from default 16px → 17.5px so all rem-based sizes scale up
@@ -41,8 +41,12 @@
   }
 
   body {
-    background: #0a0e2b;
-    color: var(--cream);
+    background:
+      radial-gradient(ellipse at 20% 0%, var(--bg-warm) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 100%, var(--bg-mid) 0%, transparent 55%),
+      var(--bg-deep);
+    background-attachment: fixed;
+    color: var(--ink);
     font-family: var(--font-zen-kaku), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

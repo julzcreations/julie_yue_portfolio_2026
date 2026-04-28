@@ -14,31 +14,32 @@ const config: Config = {
         display: ['var(--font-fraunces)', 'Georgia', 'serif'],
       },
       colors: {
-        // Navy backdrop
-        'bg-deep': '#0a0e2b',
-        'bg-mid': '#1e1b4b',
-        'bg-warm': '#2a1b5a',
+        // Warm cream backdrop (was cold navy)
+        'bg-deep': '#fef3ec',
+        'bg-mid': '#fde8dc',
+        'bg-warm': '#fef0e6',
 
-        // Paper (light surface for case study cards / detail pages)
-        paper: '#fffefc',
-        'paper-warm': '#fff8e0',
+        // Paper (slightly lighter than backdrop so cards still read as "page")
+        paper: '#fffdf7',
+        'paper-warm': '#fef9ee',
 
-        // Ink (text on paper)
-        ink: '#12163a',
+        // Ink — warm aubergine (text on cream)
+        ink: '#3a2a4a',
 
-        // Cream (text on dark navy)
-        cream: '#fef9ed',
+        // Cream token now serves text-on-cream-backdrop role
+        // (remapped to aubergine so all existing `text-cream/*` utilities read correctly)
+        cream: '#3a2a4a',
 
-        // Pastel accents (for blob gradients, hand-drawn marks)
-        sky: '#7dd3fc',
-        fuchsia: '#f0abfc',
-        amber: '#fcd34d',
-        emerald: '#6ee7b7',
-        violet: '#c4b5fd',
+        // Pastel accents — warm-rotated set (peach / coral / butter / sage / lavender / rose)
+        sky: '#9d4d6e',      // mauve-pink — links, borders, tab indicator (replaces cool blue)
+        fuchsia: '#fda4af',  // coral
+        amber: '#f59e0b',    // saturated golden-orange (still visible on cream)
+        emerald: '#bbf7d0',  // sage
+        violet: '#ddd6fe',   // lavender
         pink: '#fbcfe8',
 
-        // Accent navy (links, hand-drawn marks)
-        'accent-navy': '#1e3a8a',
+        // Heading + frame accent — deep mauve (replaces accent-navy)
+        'accent-navy': '#7a3b5c',
       },
       keyframes: {
         reveal: {

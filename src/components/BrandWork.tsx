@@ -1,39 +1,20 @@
-type BrandTile = {
+import MockupMobile from './MockupMobile'
+
+type AppTile = {
   name: string
   caption: string
   href?: string
-  // SVG renders at the size of the wrapping <div> via viewBox
-  svg: React.ReactNode
+  image: { src: string; alt: string }
+  badge: React.ReactNode
 }
 
-const tiles: BrandTile[] = [
-  {
-    name: 'Julzcreations',
-    caption: 'this portfolio',
-    href: 'https://julzcreations.com',
-    svg: (
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="12" fill="#0a0e2b" />
-        <text
-          x="32"
-          y="49"
-          textAnchor="middle"
-          fontFamily="Fraunces, Georgia, 'Times New Roman', serif"
-          fontSize="48"
-          fontWeight="700"
-          fill="#fef9ed"
-        >
-          {'ȷ'}
-        </text>
-        <circle cx="32" cy="15" r="4" fill="#fcd34d" />
-      </svg>
-    ),
-  },
+const tiles: AppTile[] = [
   {
     name: 'Swirlie',
-    caption: 'latte-art coffee shop app',
+    caption: 'Latte-art practice app',
     href: 'https://swirlie.julzcreations.com',
-    svg: (
+    image: { src: '/work/swirlie-pour.jpg', alt: 'Swirlie pattern selector' },
+    badge: (
       <svg viewBox="0 0 68 78" aria-hidden="true">
         <rect width="68" height="78" rx="8" fill="#3d2c24" />
         <path
@@ -44,51 +25,21 @@ const tiles: BrandTile[] = [
           fill="none"
         />
         <path
-          d="M52 36 C57 36 60 40 60 44 C60 48 57 51 52 51"
-          stroke="#c67a5c"
-          strokeWidth="2"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
           d="M32 54 C28 50 22 46 22 41 C22 38 24 37 27 37 C29 37 31 38.5 32 41 C33 38.5 35 37 37 37 C40 37 42 38 42 41 C42 46 36 50 32 54Z"
           stroke="#b58183"
           strokeWidth="1.8"
           strokeLinecap="round"
           fill="rgba(181,129,131,0.15)"
         />
-        <path
-          d="M22 26 C22 18 27 15 25 7"
-          stroke="#d4a843"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          opacity="0.6"
-          fill="none"
-        />
-        <path
-          d="M32 24 C32 16 28 12 31 5"
-          stroke="#d4736c"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.5"
-          fill="none"
-        />
-        <path
-          d="M40 26 C41 19 38 15 41 9"
-          stroke="#7d9a7a"
-          strokeWidth="1.3"
-          strokeLinecap="round"
-          opacity="0.4"
-          fill="none"
-        />
       </svg>
     ),
   },
   {
     name: 'Travel Journal',
-    caption: 'multi-user trip + expense tracker',
+    caption: 'Multi-user trip + expense tracker',
     href: 'https://travel-journal.julzcreations.com',
-    svg: (
+    image: { src: '/work/travel-journal-miami.jpg', alt: 'Travel Journal Miami trip dashboard' },
+    badge: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="12" fill="#fef9ed" />
         <path
@@ -110,59 +61,11 @@ const tiles: BrandTile[] = [
     ),
   },
   {
-    name: 'JulzOps',
-    caption: 'cozy ops dashboard',
-    href: 'https://ops.julzcreations.com',
-    svg: (
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <defs>
-          <linearGradient id="brand-jzg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#ff8fab" />
-            <stop offset="100%" stopColor="#a78bfa" />
-          </linearGradient>
-        </defs>
-        <rect width="64" height="64" rx="14" fill="url(#brand-jzg)" />
-        <text
-          x="32"
-          y="46"
-          textAnchor="middle"
-          fontFamily="Georgia, 'Times New Roman', serif"
-          fontSize="40"
-          fontWeight="600"
-          fill="#fff0f7"
-        >
-          J
-        </text>
-        <circle cx="46" cy="20" r="3" fill="#fcd34d" />
-      </svg>
-    ),
-  },
-  {
-    name: 'Market Insights',
-    caption: 'AI signal sweeps with Discord alerts',
-    href: 'https://insights.julzcreations.com',
-    svg: (
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="14" fill="#2e1065" />
-        <path
-          d="M10 44 L22 32 L32 40 L52 18"
-          stroke="#ff8fab"
-          strokeWidth="4.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-        <circle cx="52" cy="18" r="5" fill="#fcd34d" />
-        <circle cx="22" cy="32" r="2.6" fill="#a78bfa" />
-        <circle cx="32" cy="40" r="2.6" fill="#a78bfa" />
-      </svg>
-    ),
-  },
-  {
     name: 'SubTracker',
-    caption: 'subscriptions, charges, renewals',
+    caption: 'Subscriptions, charges, renewals',
     href: 'https://subs.julzcreations.com',
-    svg: (
+    image: { src: '/work/subtracker-dash.jpg', alt: 'SubTracker dashboard' },
+    badge: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="14" fill="#fff0f7" />
         <path
@@ -194,6 +97,31 @@ const tiles: BrandTile[] = [
       </svg>
     ),
   },
+  {
+    name: 'Closet Stories',
+    caption: 'Wardrobe tracker · App Store',
+    image: { src: '/work/closet-stories-wardrobe.jpg', alt: 'Closet Stories My Wardrobe' },
+    badge: (
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#f3ebe0" />
+        <path
+          d="M32 14 a6 6 0 1 1 -3 11"
+          stroke="#5a4734"
+          strokeWidth="3"
+          strokeLinecap="round"
+          fill="none"
+        />
+        <path
+          d="M32 24 L14 44 L50 44 Z"
+          stroke="#5a4734"
+          strokeWidth="3"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <path d="M14 44 L50 44" stroke="#5a4734" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ]
 
 export default function BrandWork() {
@@ -209,26 +137,26 @@ export default function BrandWork() {
       >
         Things I designed
       </h2>
-      <p className="mb-12 max-w-[58ch] text-[1.05rem] leading-relaxed text-ink/85">
-        Six apps. Six brand marks. I made the apps and the icons.
+      <p className="mb-16 max-w-[58ch] text-[1.05rem] leading-relaxed text-ink/85">
+        Personal apps I built end-to-end — code, brand mark, app icon. Tap a tile to visit the live one.
       </p>
 
-      <ul className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
         {tiles.map((tile) => {
           const inner = (
             <>
-              <div className="mb-3 flex h-[88px] w-[88px] items-center justify-center overflow-hidden rounded-2xl border border-ink/10 shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md">
-                <div className="h-[72px] w-[72px]">{tile.svg}</div>
+              <MockupMobile src={tile.image.src} alt={tile.image.alt} badge={tile.badge} />
+              <div className="mt-5 text-center">
+                <h3
+                  className="font-display text-[1.05rem] font-medium leading-snug"
+                  style={{ fontVariationSettings: "'opsz' 30, 'SOFT' 80" }}
+                >
+                  {tile.name}
+                </h3>
+                <p className="mt-0.5 text-[0.85rem] sm:text-[0.92rem] leading-snug text-ink/75">
+                  {tile.caption}
+                </p>
               </div>
-              <h3
-                className="font-display text-[1.05rem] font-medium leading-snug"
-                style={{ fontVariationSettings: "'opsz' 30, 'SOFT' 80" }}
-              >
-                {tile.name}
-              </h3>
-              <p className="mt-0.5 text-[0.85rem] sm:text-[0.92rem] leading-snug text-ink/75">
-                {tile.caption}
-              </p>
             </>
           )
           return (
@@ -249,6 +177,28 @@ export default function BrandWork() {
           )
         })}
       </ul>
+
+      <p className="mt-12 text-center text-[0.85rem] sm:text-[0.95rem] italic text-ink/65">
+        Also designed:{' '}
+        <a
+          href="https://ops.julzcreations.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sky underline-offset-4 transition-colors hover:underline"
+        >
+          JulzOps
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://insights.julzcreations.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sky underline-offset-4 transition-colors hover:underline"
+        >
+          Market Insights
+        </a>{' '}
+        (single-user dashboards), and this portfolio.
+      </p>
     </section>
   )
 }

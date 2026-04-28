@@ -11,9 +11,10 @@ export type FeaturedCard = {
   /**
    * Optional hero image. Drop a JPEG/PNG into `public/work/<filename>` and
    * reference it as `{ src: '/work/<filename>.jpg', alt: '<short alt>' }`.
-   * 16:9 crop preferred, ~1600px wide, JPEG quality ~80.
+   * Default aspect 16:9. Set `narrow: true` for a wider, shorter strip
+   * (good for atmospheric / hero photos).
    */
-  image?: { src: string; alt: string }
+  image?: { src: string; alt: string; narrow?: boolean }
 }
 
 export const featuredCards: FeaturedCard[] = [
@@ -48,8 +49,9 @@ export const featuredCards: FeaturedCard[] = [
       { label: '@jellieglass on Instagram', href: 'https://www.instagram.com/jellieglass', external: true },
     ],
     image: {
-      src: '/work/jellieglass-ig.jpg',
-      alt: '@jellieglass Instagram profile — the coffee account the pipeline drafts for',
+      src: '/work/swirl-series-latte.jpg',
+      alt: 'Latte with a heart pattern, soft natural light',
+      narrow: true,
     },
   },
   {

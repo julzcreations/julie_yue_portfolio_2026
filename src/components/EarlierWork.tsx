@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import MockupBrowser from './MockupBrowser'
 import { earlierProjects } from '@/content/earlier-work'
 
 export default function EarlierWork() {
@@ -27,14 +27,11 @@ export default function EarlierWork() {
       <ul className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {earlierProjects.map((p) => (
           <li key={p.name}>
-            <div className="mb-3 aspect-[4/3] overflow-hidden rounded-md border border-ink/10 bg-paper-warm/40">
-              <Image
+            <div className="mb-4">
+              <MockupBrowser
                 src={p.image}
                 alt={`${p.name} — preview`}
-                width={800}
-                height={600}
-                className="h-full w-full object-cover"
-                sizes="(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw"
+                url={p.liveSite ? new URL(p.liveSite).host : undefined}
               />
             </div>
             <h3

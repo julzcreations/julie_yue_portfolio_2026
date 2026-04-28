@@ -9,12 +9,16 @@ export default function FeaturedCard({ card }: Props) {
   return (
     <article className="border-l-2 border-ink/15 py-10 pl-8 transition-colors hover:border-sky/40">
       {card.image ? (
-        <div className="mb-7 aspect-[16/9] overflow-hidden rounded-lg border border-ink/10 bg-paper shadow-sm">
+        <div
+          className={`mb-7 overflow-hidden rounded-lg border border-ink/10 bg-paper shadow-sm ${
+            card.image.narrow ? 'aspect-[3/1]' : 'aspect-[16/9]'
+          }`}
+        >
           <Image
             src={card.image.src}
             alt={card.image.alt}
             width={1600}
-            height={900}
+            height={card.image.narrow ? 533 : 900}
             className="h-full w-full object-cover"
             sizes="(min-width: 1024px) 920px, 92vw"
             priority={card.number === '01'}

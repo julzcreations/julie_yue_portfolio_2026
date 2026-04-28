@@ -43,7 +43,7 @@ export default function FeaturedWork() {
         role="tablist"
         aria-label="Featured projects"
         onKeyDown={handleKeyDown}
-        className="mb-10 flex gap-1 overflow-x-auto scroll-pl-4 border-b border-cream/15 pb-px [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mb-10 flex gap-1 overflow-x-auto scroll-pl-4 border-b border-ink/15 pb-px [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {featuredCards.map((card, idx) => {
           const selected = idx === activeIdx
@@ -60,11 +60,11 @@ export default function FeaturedWork() {
               className={[
                 'group relative flex flex-shrink-0 items-baseline gap-2 whitespace-nowrap px-4 pb-3.5 pt-1.5 text-[0.92rem] font-medium transition-colors',
                 selected
-                  ? 'text-cream'
-                  : 'text-cream/55 hover:text-cream/90',
+                  ? 'text-ink'
+                  : 'text-ink/75 hover:text-ink',
               ].join(' ')}
             >
-              <span className="text-[0.72rem] tracking-[0.18em] text-cream/55">
+              <span className="text-[0.72rem] tracking-[0.18em] text-ink/75">
                 {card.number}
               </span>
               <span>{tabLabel(card.title)}</span>
@@ -97,11 +97,11 @@ export default function FeaturedWork() {
 
       {/* Personal projects footer — slim reference so smaller side projects
           aren't buried under the enterprise-leaning featured cards. */}
-      <div className="mt-16 border-t border-cream/15 pt-8">
-        <p className="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-cream/65">
+      <div className="mt-16 border-t border-ink/15 pt-8">
+        <p className="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/85">
           More personal projects
         </p>
-        <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem] text-cream/75">
+        <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem] text-ink/90">
           <li>
             <a
               href="https://github.com/julzcreations/travel-journal"
@@ -139,7 +139,7 @@ export default function FeaturedWork() {
               rel="noopener noreferrer"
               className="text-sky underline-offset-4 transition-colors hover:underline"
             >
-              Closet Stories <span className="text-cream/45">(App Store)</span>
+              Closet Stories <span className="text-ink/70">(App Store)</span>
             </a>
           </li>
           <li>

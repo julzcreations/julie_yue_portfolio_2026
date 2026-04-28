@@ -19,7 +19,7 @@ export default function Skills() {
         {skillCategories.map((cat) => (
           <article
             key={cat.title}
-            className="border-l-2 border-cream/15 pl-7"
+            className="border-l-2 border-ink/15 pl-7"
           >
             <h3
               className="mb-2 font-display text-[1.15rem] font-medium leading-snug"
@@ -27,19 +27,19 @@ export default function Skills() {
             >
               {cat.title}
             </h3>
-            <p className="mb-4 text-[0.92rem] leading-relaxed text-cream/75">{cat.blurb}</p>
-            <ul className="mb-4 flex flex-wrap gap-x-2.5 gap-y-1.5 text-[0.82rem] text-cream/70">
+            <p className="mb-4 text-[0.92rem] leading-relaxed text-ink/90">{cat.blurb}</p>
+            <ul className="mb-4 flex flex-wrap gap-x-2.5 gap-y-1.5 text-[0.82rem] text-ink/85">
               {cat.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full border border-cream/20 px-2.5 py-0.5"
+                  className="rounded-full border border-ink/20 px-2.5 py-0.5"
                 >
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="text-[0.82rem] italic leading-relaxed text-cream/55">
-              <span className="font-semibold not-italic uppercase tracking-[0.12em] text-cream/65">
+            <p className="text-[0.82rem] italic leading-relaxed text-ink/75">
+              <span className="font-semibold not-italic uppercase tracking-[0.12em] text-ink/85">
                 Proof —{' '}
               </span>
               {cat.proof}
@@ -49,13 +49,13 @@ export default function Skills() {
       </div>
 
       {/* Keyword rows */}
-      <div className="mt-16 space-y-6 border-t border-cream/15 pt-10">
+      <div className="mt-16 space-y-6 border-t border-ink/15 pt-10">
         {keywordRows.map((row) => (
           <div key={row.label}>
-            <h4 className="mb-2 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-cream/65">
+            <h4 className="mb-2 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/85">
               {row.label}
             </h4>
-            <p className="text-[0.95rem] leading-relaxed text-cream/75">
+            <p className="text-[0.95rem] leading-relaxed text-ink/90">
               {row.items.join(' · ')}
             </p>
           </div>

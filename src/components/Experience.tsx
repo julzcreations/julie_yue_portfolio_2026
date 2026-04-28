@@ -18,7 +18,7 @@ export default function Experience() {
         {experience.map((entry) => (
           <li
             key={`${entry.company}-${entry.period}`}
-            className="border-l-2 border-cream/15 pl-8"
+            className="border-l-2 border-ink/15 pl-8"
           >
             <header className="mb-3">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
@@ -28,17 +28,17 @@ export default function Experience() {
                 >
                   {entry.title}
                 </h3>
-                <span className="text-cream/55">·</span>
-                <span className="text-[0.95rem] text-cream/85">{entry.company}</span>
+                <span className="text-ink/75">·</span>
+                <span className="text-[0.95rem] text-ink">{entry.company}</span>
               </div>
-              <p className="mt-1 text-[0.88rem] tracking-wide text-cream/60">{entry.period}</p>
-              <p className="mt-1 text-[0.82rem] italic text-cream/55">{entry.stack}</p>
+              <p className="mt-1 text-[0.88rem] tracking-wide text-ink/80">{entry.period}</p>
+              <p className="mt-1 text-[0.82rem] italic text-ink/75">{entry.stack}</p>
             </header>
-            <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-cream/80">
+            <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-ink/90">
               {entry.bullets.map((bullet, idx) => (
                 <li key={idx} className="flex gap-3">
                   <span
-                    className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-cream/30"
+                    className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-ink/30"
                     aria-hidden
                   />
                   <span>{bullet}</span>
@@ -49,15 +49,15 @@ export default function Experience() {
         ))}
       </ol>
 
-      <div className="mt-16 border-l-2 border-cream/15 pl-8">
+      <div className="mt-16 border-l-2 border-ink/15 pl-8">
         <h3
-          className="mb-2 text-[0.82rem] font-semibold uppercase tracking-[0.18em] text-cream/65"
+          className="mb-2 text-[0.82rem] font-semibold uppercase tracking-[0.18em] text-ink/85"
         >
           Education
         </h3>
-        <p className="text-[1rem] text-cream/85">
+        <p className="text-[1rem] text-ink">
           {education.degree} · {education.school}
-          <span className="text-cream/60"> · {education.period}</span>
+          <span className="text-ink/80"> · {education.period}</span>
         </p>
       </div>
     </section>

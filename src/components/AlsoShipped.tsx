@@ -16,13 +16,13 @@ export default function AlsoShipped() {
 
       <div className="grid gap-16 md:grid-cols-[1fr_1fr]">
         <div>
-          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-cream/55">
+          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
             At Galls
           </h3>
-          <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-cream/80">
+          <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-ink/90">
             {gallsAlsoShipped.map((item) => (
               <li key={item} className="flex gap-3">
-                <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-cream/30" aria-hidden />
+                <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-ink/30" aria-hidden />
                 <span>{item}</span>
               </li>
             ))}
@@ -30,7 +30,7 @@ export default function AlsoShipped() {
         </div>
 
         <div>
-          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-cream/55">
+          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
             Personal projects
           </h3>
           <ul className="space-y-7">
@@ -44,12 +44,12 @@ export default function AlsoShipped() {
                     {item.title}
                   </h4>
                   {item.badge ? (
-                    <span className="rounded-full border border-cream/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-cream/55">
+                    <span className="rounded-full border border-ink/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-ink/75">
                       {item.badge}
                     </span>
                   ) : null}
                 </div>
-                <p className="mt-1.5 text-[0.92rem] leading-relaxed text-cream/70">{item.blurb}</p>
+                <p className="mt-1.5 text-[0.92rem] leading-relaxed text-ink/85">{item.blurb}</p>
                 {item.link ? (
                   <a
                     href={item.link.href}

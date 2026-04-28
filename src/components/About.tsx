@@ -11,7 +11,7 @@ export default function About() {
       >
         About
       </h2>
-      <div className="max-w-[58ch] space-y-6 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-cream/85">
+      <div className="max-w-[58ch] space-y-6 text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink">
         <p>
           I&apos;m Julie. Frontend engineer based in Austin, five years in. Mostly ecommerce: features,
           integrations, and reusable UI systems across modern and legacy platforms.

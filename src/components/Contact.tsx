@@ -15,7 +15,7 @@ export default function Contact() {
         <li>
           <a
             href="mailto:julie.yue.2011@gmail.com"
-            className="text-cream/85 underline-offset-4 transition-colors hover:text-sky hover:underline"
+            className="text-ink underline-offset-4 transition-colors hover:text-sky hover:underline"
           >
             julie.yue.2011@gmail.com
           </a>
@@ -25,7 +25,7 @@ export default function Contact() {
             href="https://github.com/julzcreations"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream/85 underline-offset-4 transition-colors hover:text-sky hover:underline"
+            className="text-ink underline-offset-4 transition-colors hover:text-sky hover:underline"
           >
             github.com/julzcreations
           </a>
@@ -35,13 +35,13 @@ export default function Contact() {
             href="https://www.linkedin.com/in/julzcreations/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream/85 underline-offset-4 transition-colors hover:text-sky hover:underline"
+            className="text-ink underline-offset-4 transition-colors hover:text-sky hover:underline"
           >
             linkedin.com/in/julzcreations
           </a>
         </li>
       </ul>
-      <p className="mt-12 text-sm text-cream/55">
+      <p className="mt-12 text-sm text-ink/75">
         © JulzCreations · julzcreations.com
       </p>
     </section>

@@ -87,7 +87,7 @@ export default function Hero() {
           >
             Julie Yue
           </span>
-          <span className="reveal reveal-1 text-sm text-cream/55">
+          <span className="reveal reveal-1 text-sm text-ink/75">
             Austin, TX · @julzcreations
           </span>
         </nav>
@@ -135,11 +135,11 @@ export default function Hero() {
             .
           </h1>
 
-          <p className="reveal reveal-3 mb-12 max-w-[58ch] text-[clamp(1.1rem,1.5vw,1.3rem)] leading-relaxed text-cream/85">
+          <p className="reveal reveal-3 mb-12 max-w-[58ch] text-[clamp(1.1rem,1.5vw,1.3rem)] leading-relaxed text-ink">
             Features, integrations, and reusable UI systems across modern and legacy platforms.
           </p>
 
-          <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.1rem] font-normal leading-[1.7] text-cream/90">
+          <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.1rem] font-normal leading-[1.7] text-ink">
             <span className="mr-2 inline-block text-[0.85rem] font-semibold uppercase tracking-[0.06em] text-sky">
               Currently
             </span>
@@ -162,7 +162,7 @@ export default function Hero() {
             onClick={handleScrollClick}
             aria-label="Scroll to featured work"
             tabIndex={arrowVisible ? 0 : -1}
-            className={`pointer-events-auto inline-flex flex-col items-start gap-3 text-[0.78rem] uppercase tracking-[0.25em] text-cream/70 transition-colors hover:text-sky ${
+            className={`pointer-events-auto inline-flex flex-col items-start gap-3 text-[0.78rem] uppercase tracking-[0.25em] text-ink/85 transition-colors hover:text-sky ${
               arrowVisible ? '' : 'pointer-events-none'
             }`}
           >
@@ -170,7 +170,7 @@ export default function Hero() {
           Work
           <span
             aria-hidden="true"
-            className="block h-px w-10 bg-gradient-to-r from-cream/55 to-transparent"
+            className="block h-px w-10 bg-gradient-to-r from-ink/55 to-transparent"
           />
         </span>
         <svg

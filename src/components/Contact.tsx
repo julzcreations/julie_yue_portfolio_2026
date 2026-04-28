@@ -41,7 +41,7 @@ export default function Contact() {
           </a>
         </li>
       </ul>
-      <p className="mt-12 text-sm text-ink/75">
+      <p className="mt-12 text-[0.92rem] sm:text-[1rem] text-ink/75">
         © Julzcreations · julzcreations.com
       </p>
     </section>

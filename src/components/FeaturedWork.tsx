@@ -66,7 +66,7 @@ export default function FeaturedWork() {
             >
               <span
                 className={[
-                  'text-[0.72rem] tracking-[0.18em]',
+                  'text-[0.8rem] sm:text-[0.92rem] tracking-[0.18em]',
                   selected ? 'text-sky' : 'text-ink/75',
                 ].join(' ')}
               >
@@ -94,16 +94,12 @@ export default function FeaturedWork() {
         className="animate-[fadeIn_0.35s_ease-out]"
       >
         <FeaturedCard card={active} />
-        <style>{`@keyframes fadeIn {
-          from { opacity: 0; transform: translateY(8px); }
-          to { opacity: 1; transform: translateY(0); }
-        }`}</style>
       </div>
 
       {/* Personal projects footer — slim reference so smaller side projects
           aren't buried under the enterprise-leaning featured cards. */}
       <div className="mt-16 border-t border-ink/15 pt-8">
-        <p className="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/85">
+        <p className="mb-3 text-[0.82rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.18em] text-ink/85">
           More personal projects
         </p>
         <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem] text-ink/90">

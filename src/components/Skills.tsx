@@ -28,7 +28,7 @@ export default function Skills() {
               {cat.title}
             </h3>
             <p className="mb-4 text-[0.92rem] leading-relaxed text-ink/90">{cat.blurb}</p>
-            <ul className="mb-4 flex flex-wrap gap-x-2.5 gap-y-1.5 text-[0.82rem] text-ink/85">
+            <ul className="mb-4 flex flex-wrap gap-x-2.5 gap-y-1.5 text-[0.85rem] sm:text-[0.92rem] text-ink/85">
               {cat.items.map((item) => (
                 <li
                   key={item}
@@ -38,7 +38,7 @@ export default function Skills() {
                 </li>
               ))}
             </ul>
-            <p className="text-[0.82rem] italic leading-relaxed text-ink/75">
+            <p className="text-[0.85rem] sm:text-[0.92rem] italic leading-relaxed text-ink/75">
               <span className="font-semibold not-italic uppercase tracking-[0.12em] text-ink/85">
                 Proof —{' '}
               </span>

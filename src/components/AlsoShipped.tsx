@@ -16,7 +16,7 @@ export default function AlsoShipped() {
 
       <div className="grid gap-16 md:grid-cols-[1fr_1fr]">
         <div>
-          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
+          <h3 className="mb-5 text-[0.82rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
             At Galls
           </h3>
           <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-ink/90">
@@ -30,7 +30,7 @@ export default function AlsoShipped() {
         </div>
 
         <div>
-          <h3 className="mb-5 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
+          <h3 className="mb-5 text-[0.82rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.18em] text-ink/75">
             Personal projects
           </h3>
           <ul className="space-y-7">
@@ -44,7 +44,7 @@ export default function AlsoShipped() {
                     {item.title}
                   </h4>
                   {item.badge ? (
-                    <span className="rounded-full border border-ink/20 px-2 py-0.5 text-[0.65rem] uppercase tracking-[0.12em] text-ink/75">
+                    <span className="rounded-full border border-ink/20 px-2 py-0.5 text-[0.8rem] sm:text-[0.92rem] uppercase tracking-[0.12em] text-ink/75">
                       {item.badge}
                     </span>
                   ) : null}
@@ -55,7 +55,7 @@ export default function AlsoShipped() {
                     href={item.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block text-[0.85rem] text-sky underline-offset-4 transition-colors hover:underline"
+                    className="mt-1 inline-block text-[0.85rem] sm:text-[0.95rem] text-sky underline-offset-4 transition-colors hover:underline"
                   >
                     {item.link.label} →
                   </a>

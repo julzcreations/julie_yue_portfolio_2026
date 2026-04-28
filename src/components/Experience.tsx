@@ -31,8 +31,8 @@ export default function Experience() {
                 <span className="text-ink/75">·</span>
                 <span className="text-[0.95rem] text-ink">{entry.company}</span>
               </div>
-              <p className="mt-1 text-[0.88rem] tracking-wide text-ink/80">{entry.period}</p>
-              <p className="mt-1 text-[0.82rem] italic text-ink/75">{entry.stack}</p>
+              <p className="mt-1 text-[0.88rem] sm:text-[0.95rem] tracking-wide text-ink/80">{entry.period}</p>
+              <p className="mt-1 text-[0.85rem] sm:text-[0.92rem] italic text-ink/75">{entry.stack}</p>
             </header>
             <ul className="space-y-2.5 text-[0.95rem] leading-relaxed text-ink/90">
               {entry.bullets.map((bullet, idx) => (
@@ -51,7 +51,7 @@ export default function Experience() {
 
       <div className="mt-16 border-l-2 border-ink/15 pl-8">
         <h3
-          className="mb-2 text-[0.82rem] font-semibold uppercase tracking-[0.18em] text-ink/85"
+          className="mb-2 text-[0.85rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.18em] text-ink/85"
         >
           Education
         </h3>

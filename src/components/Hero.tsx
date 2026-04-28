@@ -87,7 +87,7 @@ export default function Hero() {
           >
             Julie Yue
           </span>
-          <span className="reveal reveal-1 text-sm text-ink/75">
+          <span className="reveal reveal-1 text-[0.92rem] sm:text-[1rem] text-ink/75">
             Austin, TX · @julzcreations
           </span>
         </nav>
@@ -129,7 +129,6 @@ export default function Hero() {
                     opacity: 0.9,
                   }}
                 />
-                <style>{`@keyframes drawCircle { to { stroke-dashoffset: 0; } }`}</style>
               </svg>
             </span>
             .
@@ -140,7 +139,7 @@ export default function Hero() {
           </p>
 
           <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.1rem] font-normal leading-[1.7] text-ink">
-            <span className="mr-2 inline-block text-[0.85rem] font-semibold uppercase tracking-[0.06em] text-sky">
+            <span className="mr-2 inline-block text-[0.85rem] sm:text-[0.95rem] font-semibold uppercase tracking-[0.06em] text-sky">
               Currently
             </span>
             At Galls, I own a few features and a small piece of the architecture on the new BigCommerce Catalyst storefront. Reusable component patterns, the first cross-brand rewards integration, a Makeswift component layer for the migration. After hours, an AI content pipeline that posts daily for about five bucks a month.
@@ -162,7 +161,7 @@ export default function Hero() {
             onClick={handleScrollClick}
             aria-label="Scroll to featured work"
             tabIndex={arrowVisible ? 0 : -1}
-            className={`pointer-events-auto inline-flex flex-col items-start gap-3 text-[0.78rem] uppercase tracking-[0.25em] text-ink/85 transition-colors hover:text-sky ${
+            className={`pointer-events-auto inline-flex flex-col items-start gap-3 text-[0.82rem] sm:text-[0.92rem] uppercase tracking-[0.25em] text-ink/85 transition-colors hover:text-sky ${
               arrowVisible ? '' : 'pointer-events-none'
             }`}
           >
@@ -195,10 +194,6 @@ export default function Hero() {
             strokeLinejoin="round"
             opacity="0.85"
           />
-          <style>{`@keyframes scrollFloat {
-            0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
-            50% { transform: translateY(-6px) scale(1.05); opacity: 1; }
-          }`}</style>
         </svg>
           </a>
         </div>

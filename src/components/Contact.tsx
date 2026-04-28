@@ -42,7 +42,7 @@ export default function Contact() {
         </li>
       </ul>
       <p className="mt-12 text-sm text-ink/75">
-        © JulzCreations · julzcreations.com
+        © Julzcreations · julzcreations.com
       </p>
     </section>
   )

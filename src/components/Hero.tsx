@@ -143,7 +143,7 @@ export default function Hero() {
             <span className="mr-2 inline-block text-[0.85rem] font-semibold uppercase tracking-[0.06em] text-sky">
               Currently
             </span>
-            Leading frontend architecture on Galls&apos; new BigCommerce Catalyst storefront. Reusable component patterns, the first cross-brand rewards integration, a Makeswift component layer for the migration. After hours, an AI content pipeline that posts daily for about five bucks a month.
+            At Galls, I own a few features and a small piece of the architecture on the new BigCommerce Catalyst storefront. Reusable component patterns, the first cross-brand rewards integration, a Makeswift component layer for the migration. After hours, an AI content pipeline that posts daily for about five bucks a month.
           </p>
 
         </div>

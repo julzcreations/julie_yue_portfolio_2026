@@ -1,4 +1,4 @@
-import { skillCategories, keywordRows } from '@/content/skills'
+import { skillCategories } from '@/content/skills'
 
 export default function Skills() {
   return (
@@ -48,19 +48,6 @@ export default function Skills() {
         ))}
       </div>
 
-      {/* Keyword rows */}
-      <div className="mt-16 space-y-6 border-t border-ink/15 pt-10">
-        {keywordRows.map((row) => (
-          <div key={row.label}>
-            <h4 className="mb-2 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-ink/85">
-              {row.label}
-            </h4>
-            <p className="text-[0.95rem] leading-relaxed text-ink/90">
-              {row.items.join(' · ')}
-            </p>
-          </div>
-        ))}
-      </div>
     </section>
   )
 }

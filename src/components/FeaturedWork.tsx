@@ -58,21 +58,26 @@ export default function FeaturedWork() {
               tabIndex={selected ? 0 : -1}
               onClick={() => setActiveIdx(idx)}
               className={[
-                'group relative flex flex-shrink-0 items-baseline gap-2 whitespace-nowrap px-4 pb-3.5 pt-1.5 text-[0.92rem] font-medium transition-colors',
+                'group relative flex flex-shrink-0 items-baseline gap-2 whitespace-nowrap px-4 pb-3.5 pt-1.5 text-[0.92rem] transition-colors',
                 selected
-                  ? 'text-ink'
-                  : 'text-ink/75 hover:text-ink',
+                  ? 'font-semibold text-sky'
+                  : 'font-medium text-ink/75 hover:text-ink',
               ].join(' ')}
             >
-              <span className="text-[0.72rem] tracking-[0.18em] text-ink/75">
+              <span
+                className={[
+                  'text-[0.72rem] tracking-[0.18em]',
+                  selected ? 'text-sky' : 'text-ink/75',
+                ].join(' ')}
+              >
                 {card.number}
               </span>
               <span>{tabLabel(card.title)}</span>
               <span
                 aria-hidden="true"
                 className={[
-                  'absolute bottom-[-1px] left-2 right-2 h-[2px] rounded-full transition-all duration-300',
-                  selected ? 'bg-sky opacity-100' : 'bg-sky/0 opacity-0',
+                  'absolute bottom-[-1px] left-2 right-2 rounded-full transition-all duration-300',
+                  selected ? 'h-[3px] bg-sky opacity-100' : 'h-[2px] bg-sky/0 opacity-0',
                 ].join(' ')}
               />
             </button>

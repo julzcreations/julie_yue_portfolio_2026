@@ -14,15 +14,15 @@ export const featuredCards: FeaturedCard[] = [
   {
     number: '01',
     title: 'Swirl Series + IG-Stats MCP',
-    subtitle: 'Daily Claude pipeline for a coffee Instagram, plus the multi-account MCP server that feeds it. About $5/month.',
+    subtitle: 'A daily Claude pipeline for my coffee Instagram, plus the MCP server I wrote so I can think about reels from my phone. Costs me about $5 a month.',
     problem:
-      'I started a coffee Instagram cold. 100 views per reel, no playbook for what worked. Once the pipeline was running I also wanted to think about reels with Claude away from my desktop, with the actual numbers in front of me, not later from memory.',
+      'Cold-started a coffee Instagram. 100 views a reel and no real idea what was working. I wanted a way to figure out what to try next without spending hours guessing. And once the pipeline was running, I kept getting reel ideas away from my desk. I wanted to talk through them with Claude right then, on my phone, with the actual numbers in front of me.',
     approach:
-      'Two pieces. The pipeline is a daily GitHub Actions cron. Three times a week it produces a strategic brief from past performance, three voice variations of the next script, and a 15-frame visual analysis of the latest post. Idempotent, ~$5/month, a drafting assistant rather than an auto-poster.\n\nThe MCP server is a TypeScript Worker on Cloudflare with Durable Objects, written so each Claude session keeps state across the streamable-HTTP exchange. The tools wrap the Instagram Graph API: list reels, fetch insights, bulk-fetch in parallel, rank top reels by any metric. Multi-account routing is baked into every call.',
+      'Two pieces. The pipeline is a daily GitHub Actions cron. Three times a week it pulls a strategic brief from past performance, drafts three voice variations of the next script, and runs a 15-frame visual analysis of the latest post. About $5 a month. It’s a drafting assistant, not an auto-poster.\n\nThe MCP server is a TypeScript Worker on Cloudflare with Durable Objects, so each Claude session keeps its state across the streamable-HTTP exchange. The tools wrap Instagram’s Graph API: list reels, pull insights, bulk-fetch in parallel, rank top reels by whichever metric I want. Multi-account routing is baked in, so I can switch from my coffee account (jellieglass) to my main one (julzevias) in the same conversation.',
     outcome:
-      '12 reels through. The literal scripts are starting points I deviate from. The analysis layer underneath is what compounds: pattern reads, algorithm signal, strategic framing. Claude pulls per-reel stats from either of my Instagram accounts (jellieglass for Swirlie, julzevias for personal) on demand.',
+      '12 reels in. The scripts the pipeline drafts are starting points I deviate from — the part that actually compounds is the analysis underneath. Pattern reads, algorithm signal, strategic framing. And now when an idea hits, I can pull stats from either account right there instead of trying to remember a number from last week.',
     honestNote:
-      'I designed both pieces, picked the Opus + Sonnet + Haiku model routing, chose Cloudflare Workers as the host (after Fly.io required a payment method I wasn’t ready for), and set the cost ceiling. Claude Code wrote most of the implementation under my direction. I don’t write Python day-to-day; my native stack is TypeScript.',
+      'I designed both pieces, picked the Opus + Sonnet + Haiku model split, and called the host (Cloudflare Workers, after Fly.io wanted a payment method I wasn’t ready to add). I set the cost ceiling and review every output. Claude Code wrote most of the implementation under my direction. I don’t write Python day-to-day; my main stack is TypeScript.',
     stack: [
       'Anthropic SDK (Opus + Sonnet + Haiku)',
       'Cloudflare Workers + Durable Objects',

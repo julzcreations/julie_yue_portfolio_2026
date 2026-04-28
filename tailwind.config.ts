@@ -31,7 +31,7 @@ const config: Config = {
         cream: '#3a2a4a',
 
         // Pastel accents — warm-rotated set (peach / coral / butter / sage / lavender / rose)
-        sky: '#9d4d6e',      // mauve-pink — links, borders, tab indicator (replaces cool blue)
+        sky: '#7a3b5c',      // deep mauve — links, borders, tab indicator (slightly darker for legibility)
         fuchsia: '#fda4af',  // coral
         amber: '#f59e0b',    // saturated golden-orange (still visible on cream)
         emerald: '#bbf7d0',  // sage

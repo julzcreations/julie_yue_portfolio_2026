@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { FeaturedCard as FeaturedCardData } from '@/content/featured'
 
 type Props = {
@@ -7,6 +8,20 @@ type Props = {
 export default function FeaturedCard({ card }: Props) {
   return (
     <article className="border-l-2 border-ink/15 py-10 pl-8 transition-colors hover:border-sky/40">
+      {card.image ? (
+        <div className="mb-7 aspect-[16/9] overflow-hidden rounded-lg border border-ink/10 bg-paper shadow-sm">
+          <Image
+            src={card.image.src}
+            alt={card.image.alt}
+            width={1600}
+            height={900}
+            className="h-full w-full object-cover"
+            sizes="(min-width: 1024px) 920px, 92vw"
+            priority={card.number === '01'}
+          />
+        </div>
+      ) : null}
+
       <header className="mb-6 flex items-baseline gap-4">
         <span className="text-[0.85rem] sm:text-[0.92rem] uppercase tracking-[0.2em] text-ink/75">{card.number}</span>
         <div>

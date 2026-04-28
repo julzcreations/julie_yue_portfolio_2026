@@ -8,6 +8,12 @@ export type FeaturedCard = {
   honestNote?: string
   stack: string[]
   links?: { label: string; href: string; external?: boolean }[]
+  /**
+   * Optional hero image. Drop a JPEG/PNG into `public/work/<filename>` and
+   * reference it as `{ src: '/work/<filename>.jpg', alt: '<short alt>' }`.
+   * 16:9 crop preferred, ~1600px wide, JPEG quality ~80.
+   */
+  image?: { src: string; alt: string }
 }
 
 export const featuredCards: FeaturedCard[] = [

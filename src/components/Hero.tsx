@@ -79,18 +79,28 @@ export default function Hero() {
 
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-[1080px] flex-col px-6 pb-32 pt-12 sm:px-12">
-        {/* Top nav */}
-        <nav className="mb-32 flex items-baseline justify-between">
+        {/* Hand-drawn frame corners — give the hero a "designed object" feel */}
+        <FrameCorner className="reveal reveal-1 absolute left-4 top-4 h-12 w-12 sm:left-8 sm:top-8" path="M 4 28 L 4 4 L 28 4" />
+        <FrameCorner className="reveal reveal-1 absolute right-4 top-4 h-12 w-12 -scale-x-100 sm:right-8 sm:top-8" path="M 4 28 L 4 4 L 28 4" />
+        <FrameCorner className="reveal reveal-1 absolute bottom-4 left-4 h-12 w-12 -scale-y-100 sm:bottom-8 sm:left-8" path="M 4 28 L 4 4 L 28 4" />
+        <FrameCorner className="reveal reveal-1 absolute bottom-4 right-4 h-12 w-12 -scale-x-100 -scale-y-100 sm:bottom-8 sm:right-8" path="M 4 28 L 4 4 L 28 4" />
+
+        {/* Masthead — zine-style with dashed divider */}
+        <header className="mb-28 flex items-baseline gap-4 sm:gap-6">
           <span
-            className="reveal reveal-1 font-display text-lg font-medium tracking-tight"
-            style={{ fontVariationSettings: "'opsz' 20, 'SOFT' 50" }}
+            className="reveal reveal-1 shrink-0 font-display text-[1.15rem] font-medium tracking-tight sm:text-[1.3rem]"
+            style={{ fontVariationSettings: "'opsz' 24, 'SOFT' 60" }}
           >
             Julie Yue
           </span>
-          <span className="reveal reveal-1 text-[0.92rem] sm:text-[1rem] text-ink/75">
-            Austin, TX · @julzcreations
+          <span
+            aria-hidden="true"
+            className="reveal reveal-1 hidden flex-1 self-center border-t border-dashed border-ink/30 sm:block"
+          />
+          <span className="reveal reveal-1 shrink-0 font-display text-[0.82rem] sm:text-[0.92rem] uppercase italic tracking-[0.2em] text-ink/85">
+            Issue 2026 · Austin, TX
           </span>
-        </nav>
+        </header>
 
         {/* Hero content */}
         <div className="flex flex-1 flex-col justify-center">
@@ -199,5 +209,25 @@ export default function Hero() {
         </div>
       </div>
     </section>
+  )
+}
+
+function FrameCorner({ className, path }: { className: string; path: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 32 32"
+      className={`pointer-events-none text-accent-navy ${className}`}
+    >
+      <path
+        d={path}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity={0.55}
+      />
+    </svg>
   )
 }

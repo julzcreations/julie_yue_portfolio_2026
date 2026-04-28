@@ -42,12 +42,12 @@
 
   body {
     /* Multi-stop pastel wash anchored to page bounds (not viewport) so color
-       develops as you scroll. Coral peak at bottom-right, butter mid-right,
-       lavender mid-left, warm peach bloom at top, on cream. */
+       develops as you scroll. All stops kept at similar low alpha so no single
+       color dominates — they blend into each other softly. */
     background:
-      radial-gradient(ellipse 70% 35% at 95% 100%, rgba(253, 164, 175, 0.55) 0%, transparent 70%),
-      radial-gradient(ellipse 55% 30% at 85% 30%, rgba(254, 230, 138, 0.42) 0%, transparent 70%),
-      radial-gradient(ellipse 55% 40% at 5% 60%, rgba(221, 214, 254, 0.45) 0%, transparent 70%),
+      radial-gradient(ellipse 70% 35% at 95% 100%, rgba(253, 164, 175, 0.28) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 30% at 85% 30%, rgba(254, 230, 138, 0.20) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 40% at 5% 60%, rgba(221, 214, 254, 0.32) 0%, transparent 70%),
       radial-gradient(ellipse 60% 25% at 30% 0%, var(--bg-warm) 0%, transparent 65%),
       var(--bg-deep);
     color: var(--ink);
@@ -104,5 +104,35 @@
   @keyframes scrollFloat {
     0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
     50% { transform: translateY(-6px) scale(1.05); opacity: 1; }
+  }
+
+  /* Cursor-trail sparkles */
+  .sparkle {
+    position: fixed;
+    pointer-events: none;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+      0 0 4px rgba(255, 255, 255, 0.85),
+      0 0 9px rgba(255, 255, 255, 0.5),
+      0 0 16px rgba(254, 230, 138, 0.35);
+    transform: translate(-50%, -50%);
+    will-change: opacity, transform;
+    animation: sparkleFade 900ms ease-out forwards;
+  }
+
+  @keyframes sparkleFade {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.4);
+    }
+    20% {
+      opacity: 0.9;
+      transform: translate(-50%, calc(-50% - 2px)) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(calc(-50% + var(--sparkle-dx, 0px)), calc(-50% - 28px)) scale(0.5);
+    }
   }
 }

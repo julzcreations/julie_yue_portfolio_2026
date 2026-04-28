@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Fraunces, Zen_Kaku_Gothic_New } from 'next/font/google'
+import MouseSparkles from '@/components/MouseSparkles'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -38,7 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fraunces.variable} ${zenKaku.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <MouseSparkles />
+        {children}
+      </body>
     </html>
   )
 }

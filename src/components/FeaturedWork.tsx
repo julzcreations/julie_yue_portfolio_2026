@@ -76,8 +76,8 @@ export default function FeaturedWork() {
               <span
                 aria-hidden="true"
                 className={[
-                  'absolute bottom-[-1px] left-2 right-2 rounded-full transition-all duration-300',
-                  selected ? 'h-[3px] bg-sky opacity-100' : 'h-[2px] bg-sky/0 opacity-0',
+                  'pointer-events-none absolute bottom-[-1px] left-2 right-2 rounded-full bg-sky transition-all duration-300',
+                  selected ? 'h-[3px] opacity-100' : 'h-[2px] opacity-0',
                 ].join(' ')}
               />
             </button>

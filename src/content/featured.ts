@@ -47,6 +47,10 @@ export const featuredCards: FeaturedCard[] = [
       { label: 'IG-Stats MCP on GitHub', href: 'https://github.com/julzcreations/ig-stats-cf', external: true },
       { label: '@jellieglass on Instagram', href: 'https://www.instagram.com/jellieglass', external: true },
     ],
+    image: {
+      src: '/work/jellieglass-ig.jpg',
+      alt: '@jellieglass Instagram profile — the coffee account the pipeline drafts for',
+    },
   },
   {
     number: '02',

@@ -41,6 +41,15 @@ export default function Contact() {
           </a>
         </li>
       </ul>
+
+      <a
+        href="/julie-yue-resume.pdf"
+        download="Julie-Yue-resume.pdf"
+        className="mt-10 inline-flex items-center gap-2 rounded-full border border-sky/40 px-5 py-2.5 text-[0.95rem] font-medium text-sky transition-colors hover:bg-sky hover:text-paper"
+      >
+        Download résumé (PDF)
+        <span aria-hidden="true">↓</span>
+      </a>
       <p className="mt-12 text-[0.92rem] sm:text-[1rem] text-ink/75">
         © Julzcreations · julzcreations.com
       </p>

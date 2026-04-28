@@ -37,6 +37,23 @@ export const skillCategories: SkillCategory[] = [
     proof: 'Swirlie · Travel Journal · this portfolio · Closet Stories',
   },
   {
+    title: 'Frontend quality',
+    blurb: 'Accessibility-first, performance-aware, audit-driven.',
+    items: [
+      'Chrome DevTools',
+      'Lighthouse',
+      'PageSpeed Insights',
+      'Core Web Vitals',
+      'UsableNet audits',
+      'Semantic HTML + ARIA',
+      'Responsive UI',
+      'Performance profiling',
+      'JUnit + regression validation',
+    ],
+    proof:
+      'Galls + USPT a11y fixes (PDPs, cart, search drawer) · perf checks before merge · AssetMark JUnit-backed test environments + accessibility-conscious enterprise UI standards',
+  },
+  {
     title: 'Platform & infrastructure',
     blurb: 'Legacy environments and modern stacks. Cost-aware shipping inside real constraints.',
     items: [
@@ -86,6 +103,8 @@ export const keywordRows: { label: string; items: string[] }[] = [
       'Python',
       'Expo / React Native',
       'Node.js',
+      'Apps Script',
+      'PHP',
     ],
   },
   {

@@ -50,13 +50,14 @@ export const experience: ExperienceEntry[] = [
       'Expanded language support to English + French for a Canadian user base; supported 300+ private labels and 6 enterprise clients.',
       'Automated the generation of 50+ settings for custom advisor reports.',
       'Built API-driven UI features supporting real-time data updates for advisor workflows.',
+      'Supported testing and debugging across Ember-based applications: JUnit-backed test environments, browser DevTools debugging, regression validation, accessibility-conscious enterprise UI standards.',
     ],
   },
   {
     title: 'Frontend Developer Intern',
     company: 'Growth Acceleration Partners',
     period: 'Aug 2021 – May 2022',
-    stack: 'JavaScript · React · Redux · WordPress · Git',
+    stack: 'JavaScript · React · Redux · WordPress · Apps Script · PHP · Git',
     bullets: [
       'Built a real-time staffing-cost dashboard for development staff across geographies.',
       'Created features and connected APIs for an employee profile dashboard.',

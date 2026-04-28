@@ -161,11 +161,11 @@ export default function FeaturedWork() {
 /** Compact tab label — keeps tabs scannable without wrapping */
 function tabLabel(fullTitle: string): string {
   const map: Record<string, string> = {
-    'Swirl Series Ecosystem': 'Swirl Series',
-    'Galls AI Shopping Drawer': 'AI Drawer',
-    'Galls Location Tracker': 'Location Tracker',
+    'Swirl Series + IG-Stats MCP': 'Swirl + IG-Stats',
     'Galls Tooling + Integrations': 'Galls Integrations',
-    'IG-Stats MCP': 'IG-Stats MCP',
+    'Galls AI Shopping Drawer': 'AI Drawer',
+    'Galls Location Tracker + EDD/EST': 'Location + EDD',
+    'Accessibility + Performance': 'A11y + Perf',
   }
   return map[fullTitle] ?? fullTitle
 }

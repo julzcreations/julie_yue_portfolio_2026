@@ -95,12 +95,16 @@ export default function Hero() {
         {/* Hero content */}
         <div className="flex flex-1 flex-col justify-center">
           <h1
-            className="reveal reveal-2 mb-9 max-w-[18ch] font-display text-[clamp(2.6rem,6.5vw,5.2rem)] font-normal leading-[1.05] tracking-tight"
+            className="reveal reveal-2 mb-9 max-w-[26ch] font-display text-[clamp(2.6rem,6.5vw,5.2rem)] font-normal leading-[1.05] tracking-tight"
             style={{
               fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0",
             }}
           >
-            Engineer who ships with{' '}
+            Frontend engineer.
+            <br />
+            Five years in ecommerce.
+            <br />
+            Lately, with{' '}
             <span className="relative inline-block px-[0.1em]">
               AI
               <svg
@@ -128,20 +132,18 @@ export default function Hero() {
                 <style>{`@keyframes drawCircle { to { stroke-dashoffset: 0; } }`}</style>
               </svg>
             </span>
-            ,
-            <br />
-            not around it.
+            .
           </h1>
 
           <p className="reveal reveal-3 mb-12 max-w-[58ch] text-[clamp(1.1rem,1.5vw,1.3rem)] leading-relaxed text-cream/85">
-            Product-minded frontend engineer who directs AI agents to ship systems I design.
+            Features, integrations, and reusable UI systems across modern and legacy platforms.
           </p>
 
           <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.1rem] font-normal leading-[1.7] text-cream/90">
             <span className="mr-2 inline-block text-[0.85rem] font-semibold uppercase tracking-[0.06em] text-sky">
-              Currently —
+              Currently
             </span>
-            On the BigCommerce team at Galls — building out a component system and shipping a loyalty integration; running a daily AI content pipeline at home.
+            Leading frontend architecture on Galls&apos; new BigCommerce Catalyst storefront. Reusable component patterns, the first cross-brand rewards integration, a Makeswift component layer for the migration. After hours, an AI content pipeline that posts daily for about five bucks a month.
           </p>
 
         </div>

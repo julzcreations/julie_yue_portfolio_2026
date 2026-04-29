@@ -106,16 +106,20 @@
     50% { transform: translateY(-6px) scale(1.05); opacity: 1; }
   }
 
-  /* Cursor-trail sparkles */
+  /* Cursor-trail sparkles — 4-point pastel sparkle shape */
   .sparkle {
     position: fixed;
     pointer-events: none;
-    background: #f43f5e; /* deeper rose — pops on cream */
-    border-radius: 50%;
-    box-shadow:
-      0 0 5px rgba(244, 63, 94, 0.85),
-      0 0 12px rgba(244, 63, 94, 0.55),
-      0 0 22px rgba(225, 29, 72, 0.40);
+    background: #f9a8d4; /* pastel pink */
+    /* 4-point sparkle / starburst shape */
+    clip-path: polygon(
+      50% 0%, 55% 45%, 100% 50%, 55% 55%,
+      50% 100%, 45% 55%, 0% 50%, 45% 45%
+    );
+    /* drop-shadow respects clip-path; halo follows the sparkle outline */
+    filter:
+      drop-shadow(0 0 3px rgba(249, 168, 212, 0.85))
+      drop-shadow(0 0 6px rgba(244, 114, 182, 0.45));
     transform: translate(-50%, -50%);
     will-change: opacity, transform;
     animation: sparkleFade 900ms ease-out forwards;

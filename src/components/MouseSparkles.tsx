@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 
 type Sparkle = { id: number; x: number; y: number; size: number; dx: number }
 
-const SPAWN_THROTTLE_MS = 65
+const SPAWN_THROTTLE_MS = 130
 const SPARKLE_LIFE_MS = 900
-const MAX_ACTIVE = 14
+const MAX_ACTIVE = 8
 
 export default function MouseSparkles() {
   const [sparkles, setSparkles] = useState<Sparkle[]>([])

@@ -96,7 +96,7 @@ export default function Hero() {
               Hi, I&apos;m{' '}
               <span
                 className="font-serif bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
-                style={{ WebkitBackgroundClip: 'text', fontWeight: 600 }}
+                style={{ WebkitBackgroundClip: 'text', fontWeight: 400 }}
               >
                 Julie Yue
               </span>

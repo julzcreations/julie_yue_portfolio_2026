@@ -49,7 +49,7 @@ export const featuredCards: FeaturedCard[] = [
       { label: '@jellieglass on Instagram', href: 'https://www.instagram.com/jellieglass', external: true },
     ],
     image: {
-      src: '/work/swirl-series-latte.png',
+      src: '/work/ai-latte.png',
       alt: 'Latte with a heart pattern, soft natural light',
       narrow: true,
     },

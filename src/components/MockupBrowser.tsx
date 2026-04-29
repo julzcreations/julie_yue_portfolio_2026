@@ -13,7 +13,7 @@ type Props = {
  */
 export default function MockupBrowser({ src, alt, url }: Props) {
   return (
-    {/* Outer frame — like a matted picture frame around the screenshot */}
+    // Outer frame — like a matted picture frame around the screenshot
     <div className="rounded-md bg-paper-warm p-2.5 shadow-[0_3px_10px_rgba(21,18,58,0.10),0_1px_3px_rgba(21,18,58,0.06)] ring-1 ring-ink/15">
       <div className="overflow-hidden rounded-sm border border-ink/15 bg-paper">
         {/* Chrome */}

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState, type MouseEvent } from 'react'
 
 function handleScrollClick(event: MouseEvent<HTMLAnchorElement>) {
@@ -70,9 +71,9 @@ export default function Hero() {
       />
 
       {/* Hero content — no paper card, sits directly on the warm gradient */}
-      <div className="relative z-10 w-full max-w-[1000px] px-2 sm:px-4">
+      <div className="relative z-10 w-full max-w-[1200px] px-2 sm:px-4">
         {/* Top nav */}
-        <nav className="mb-20 flex items-baseline justify-between gap-4 sm:mb-24">
+        <nav className="mb-16 flex items-baseline justify-between gap-4 sm:mb-20">
           <span
             className="reveal reveal-1 font-display text-[1.05rem] font-medium tracking-tight sm:text-[1.2rem]"
             style={{ fontVariationSettings: "'opsz' 22, 'SOFT' 60" }}
@@ -84,32 +85,50 @@ export default function Hero() {
           </span>
         </nav>
 
-        {/* Hero content */}
-        <div>
-          <h1
-            className="reveal reveal-2 mb-9 max-w-[20ch] font-display text-[clamp(2.4rem,6vw,4.8rem)] font-normal leading-[1.05] tracking-tight"
-            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
-          >
-            Hi, I&apos;m{' '}
-            <span
-              className="bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
-              style={{ WebkitBackgroundClip: 'text' }}
+        {/* Two-column hero: text left, headshot right (stacks on mobile) */}
+        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
+          {/* Left column — text */}
+          <div className="flex-1">
+            <h1
+              className="reveal reveal-2 mb-9 max-w-[20ch] font-display text-[clamp(2.4rem,5.5vw,4.4rem)] font-normal leading-[1.05] tracking-tight"
+              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
             >
-              Julie Yue
-            </span>
-            .
-          </h1>
+              Hi, I&apos;m{' '}
+              <span
+                className="bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
+                style={{ WebkitBackgroundClip: 'text' }}
+              >
+                Julie Yue
+              </span>
+              .
+            </h1>
 
-          <p className="reveal reveal-3 mb-10 max-w-[60ch] text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink/90">
-            I&apos;m a frontend engineer who designs and ships thoughtful UI systems—bringing strong visual taste and a growing focus on AI-powered, human-centered experiences.
-          </p>
+            <p className="reveal reveal-3 mb-10 max-w-[58ch] text-[clamp(1.05rem,1.3vw,1.2rem)] leading-relaxed text-ink/90">
+              I&apos;m a frontend engineer who designs and ships thoughtful UI systems—bringing strong visual taste and a growing focus on AI-powered, human-centered experiences.
+            </p>
 
-          <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">
-            <span className="mr-2 inline-block text-[0.85rem] sm:text-[0.95rem] font-semibold uppercase tracking-[0.06em] text-sky">
-              Currently
-            </span>
-            At Galls, I&apos;m giving one of our brands, Tactical Gear, a new look and new home on BigCommerce Catalyst.
-          </p>
+            <p className="reveal reveal-4 max-w-[58ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">
+              <span className="mr-2 inline-block text-[0.85rem] sm:text-[0.95rem] font-semibold uppercase tracking-[0.06em] text-sky">
+                Currently
+              </span>
+              At Galls, I&apos;m giving one of our brands, Tactical Gear, a new look and new home on BigCommerce Catalyst.
+            </p>
+          </div>
+
+          {/* Right column — headshot */}
+          <div className="reveal reveal-2 w-full max-w-[320px] flex-shrink-0 sm:max-w-[380px] lg:w-[380px]">
+            <div className="overflow-hidden rounded-2xl border border-ink/10 bg-paper">
+              <Image
+                src="/work/julie_yue_headshot.png"
+                alt="Julie Yue"
+                width={760}
+                height={760}
+                className="h-full w-full object-cover"
+                sizes="(min-width: 1024px) 380px, (min-width: 640px) 380px, 90vw"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </div>
 

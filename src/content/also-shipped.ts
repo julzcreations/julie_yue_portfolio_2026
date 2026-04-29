@@ -28,28 +28,28 @@ export const personalAlsoShipped: PersonalItem[] = [
     blurb:
       'Multi-user trip log + expense tracker. Built in a day with Claude Code under my architecture. Sign in with Google to use.',
     link: { label: 'travel-journal.julzcreations.com', href: 'https://travel-journal.julzcreations.com' },
-    image: { src: '/work/travel-journal-miami.jpg', alt: 'Travel Journal Miami 2026 trip dashboard with day cards and expenses tab' },
+    image: { src: '/work/travel-journal-miami.png', alt: 'Travel Journal Miami 2026 trip dashboard with day cards and expenses tab' },
   },
   {
     title: 'Swirlie',
     blurb:
       'Latte-art practice app for my coffee Instagram. Pattern selector + tracing overlay over your live pour. Hand-drawn coffee-shop brand.',
     link: { label: 'swirlie.julzcreations.com', href: 'https://swirlie.julzcreations.com' },
-    image: { src: '/work/swirlie-pour.jpg', alt: 'Swirlie "Choose your pour" screen with Heart, Rosetta, Tulip, Swan options' },
+    image: { src: '/work/swirlie-pour.png', alt: 'Swirlie "Choose your pour" screen with Heart, Rosetta, Tulip, Swan options' },
   },
   {
     title: 'SubTracker',
     blurb:
       'Subscription overview app. Monthly + annual spend, category breakdown, expiring soon. Built for me; lives at subs.julzcreations.com.',
     link: { label: 'subs.julzcreations.com', href: 'https://subs.julzcreations.com' },
-    image: { src: '/work/subtracker-dash.jpg', alt: 'SubTracker dashboard showing monthly spend, active count, expiring soon, and category breakdown' },
+    image: { src: '/work/subtracker-dash.png', alt: 'SubTracker dashboard showing monthly spend, active count, expiring soon, and category breakdown' },
   },
   {
     title: 'Closet Stories',
     blurb:
       'Wardrobe tracker shipped to the App Store (v1.0.0). Expo + Supabase. Maintenance mode.',
     badge: 'App Store',
-    image: { src: '/work/closet-stories-wardrobe.jpg', alt: 'Closet Stories My Wardrobe view with category filters and grid of clothing items' },
+    image: { src: '/work/closet-stories-wardrobe.png', alt: 'Closet Stories My Wardrobe view with category filters and grid of clothing items' },
   },
   {
     title: 'JulzOps',

@@ -13,7 +13,7 @@ const tiles: AppTile[] = [
     name: 'Swirlie',
     caption: 'Latte-art practice app',
     href: 'https://swirlie.julzcreations.com',
-    image: { src: '/work/swirlie-pour.jpg', alt: 'Swirlie pattern selector' },
+    image: { src: '/work/swirlie-pour.png', alt: 'Swirlie pattern selector' },
     badge: (
       <svg viewBox="0 0 68 78" aria-hidden="true">
         <rect width="68" height="78" rx="8" fill="#3d2c24" />
@@ -38,7 +38,7 @@ const tiles: AppTile[] = [
     name: 'Travel Journal',
     caption: 'Multi-user trip + expense tracker',
     href: 'https://travel-journal.julzcreations.com',
-    image: { src: '/work/travel-journal-miami.jpg', alt: 'Travel Journal Miami trip dashboard' },
+    image: { src: '/work/travel-journal-miami.png', alt: 'Travel Journal Miami trip dashboard' },
     badge: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="12" fill="#fef9ed" />
@@ -64,7 +64,7 @@ const tiles: AppTile[] = [
     name: 'SubTracker',
     caption: 'Subscriptions, charges, renewals',
     href: 'https://subs.julzcreations.com',
-    image: { src: '/work/subtracker-dash.jpg', alt: 'SubTracker dashboard' },
+    image: { src: '/work/subtracker-dash.png', alt: 'SubTracker dashboard' },
     badge: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="14" fill="#fff0f7" />
@@ -100,7 +100,7 @@ const tiles: AppTile[] = [
   {
     name: 'Closet Stories',
     caption: 'Wardrobe tracker · App Store',
-    image: { src: '/work/closet-stories-wardrobe.jpg', alt: 'Closet Stories My Wardrobe' },
+    image: { src: '/work/closet-stories-wardrobe.png', alt: 'Closet Stories My Wardrobe' },
     badge: (
       <svg viewBox="0 0 64 64" aria-hidden="true">
         <rect width="64" height="64" rx="14" fill="#f3ebe0" />

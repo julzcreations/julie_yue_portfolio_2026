@@ -28,8 +28,9 @@ export default function MouseSparkles() {
         id,
         x: e.clientX,
         y: e.clientY,
-        size: 2 + Math.random() * 3,
-        dx: (Math.random() - 0.5) * 24,
+        // Newest sparkles spawn larger (near the cursor); animation shrinks them as they trail.
+        size: 4 + Math.random() * 5,
+        dx: (Math.random() - 0.5) * 26,
       }
       setSparkles((prev) => [...prev.slice(-(MAX_ACTIVE - 1)), sparkle])
 

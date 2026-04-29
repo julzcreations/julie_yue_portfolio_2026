@@ -17,19 +17,29 @@ const tiles: AppTile[] = [
     image: { src: '/work/swirlie-pour.png', alt: 'Swirlie pattern selector' },
     badgeBg: 'bg-[#3d2c24]',
     badge: (
-      <svg viewBox="0 0 68 78" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-        <rect width="68" height="78" rx="8" fill="#3d2c24" />
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="10" fill="#3d2c24" />
+        {/* Cup centered in the 64x64 box */}
         <path
-          d="M12 30 C11 29 9 30 9 32 L11 56 C11 60 15 62 20 62 L44 62 C48 62 52 60 52 56 L54 32 C54 30 53 29 52 30 Z"
+          d="M14 24 C13 23 11 24 11 26 L13 46 C13 50 17 52 22 52 L42 52 C47 52 51 50 51 46 L53 26 C53 24 52 23 51 24 Z"
           stroke="#f5efe6"
-          strokeWidth="2.5"
+          strokeWidth="2.4"
           strokeLinecap="round"
           fill="none"
         />
+        {/* Saucer handle */}
         <path
-          d="M32 54 C28 50 22 46 22 41 C22 38 24 37 27 37 C29 37 31 38.5 32 41 C33 38.5 35 37 37 37 C40 37 42 38 42 41 C42 46 36 50 32 54Z"
-          stroke="#b58183"
+          d="M51 30 C55 30 57 33 57 36 C57 39 55 42 51 42"
+          stroke="#c67a5c"
           strokeWidth="1.8"
+          strokeLinecap="round"
+          fill="none"
+        />
+        {/* Heart */}
+        <path
+          d="M32 44 C29 41 24 38 24 34 C24 31.5 26 30.5 28 30.5 C29.5 30.5 31 31.8 32 33.5 C33 31.8 34.5 30.5 36 30.5 C38 30.5 40 31.5 40 34 C40 38 35 41 32 44Z"
+          stroke="#b58183"
+          strokeWidth="1.6"
           strokeLinecap="round"
           fill="rgba(181,129,131,0.15)"
         />

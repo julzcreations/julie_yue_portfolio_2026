@@ -16,8 +16,8 @@ type Props = {
 export default function MockupMobile({ src, alt, badge, badgeBg = 'bg-paper' }: Props) {
   return (
     <div className="relative mx-auto w-full max-w-[260px]">
-      {/* Outer phone frame — no shadow per design */}
-      <div className="relative aspect-[9/19.5] rounded-[2.4rem] bg-gradient-to-br from-[#1a1530] to-[#241b3d] p-[6px]">
+      {/* Outer phone frame — softer plum bezel for the pastel palette */}
+      <div className="relative aspect-[9/19.5] rounded-[2.4rem] bg-gradient-to-br from-[#3a3050] to-[#473d63] p-[6px]">
         {/* Inner screen */}
         <div className="relative h-full w-full overflow-hidden rounded-[2rem] bg-paper-warm">
           <Image
@@ -31,7 +31,7 @@ export default function MockupMobile({ src, alt, badge, badgeBg = 'bg-paper' }: 
           {/* Notch */}
           <span
             aria-hidden="true"
-            className="absolute left-1/2 top-[6px] h-[18px] w-[88px] -translate-x-1/2 rounded-full bg-[#1a1530]"
+            className="absolute left-1/2 top-[6px] h-[18px] w-[88px] -translate-x-1/2 rounded-full bg-[#3a3050]"
           />
         </div>
       </div>

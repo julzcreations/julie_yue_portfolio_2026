@@ -69,77 +69,77 @@ export default function Hero() {
         className="pointer-events-none absolute right-[18%] top-[50%] z-0 h-72 w-72 rounded-full bg-amber opacity-[0.10] blur-[100px]"
       />
 
-      {/* Paper note */}
-      <article
-        className="reveal reveal-1 relative z-10 w-full max-w-[1000px] rounded-2xl bg-paper px-7 py-12 shadow-[0_18px_44px_rgba(21,18,58,0.08),0_4px_12px_rgba(21,18,58,0.05)] sm:px-16 sm:py-20"
-        style={{ transform: 'rotate(-0.35deg)' }}
-      >
-        <div style={{ transform: 'rotate(0.35deg)' }}>
-          {/* Top nav — plain, no zine masthead */}
-          <nav className="mb-20 flex items-baseline justify-between gap-4 sm:mb-24">
+      {/* Hero content — no paper card, sits directly on the warm gradient */}
+      <div className="relative z-10 w-full max-w-[1000px] px-2 sm:px-4">
+        {/* Top nav */}
+        <nav className="mb-20 flex items-baseline justify-between gap-4 sm:mb-24">
+          <span
+            className="reveal reveal-1 font-display text-[1.05rem] font-medium tracking-tight sm:text-[1.2rem]"
+            style={{ fontVariationSettings: "'opsz' 22, 'SOFT' 60" }}
+          >
+            Julie Yue
+          </span>
+          <span className="reveal reveal-1 text-[0.85rem] sm:text-[0.95rem] text-ink/75">
+            Austin, TX · @julzcreations
+          </span>
+        </nav>
+
+        {/* Hero content */}
+        <div>
+          <h1
+            className="reveal reveal-2 mb-9 max-w-[26ch] font-display text-[clamp(2.4rem,6vw,4.8rem)] font-normal leading-[1.05] tracking-tight"
+            style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
+          >
+            Hi. My name is{' '}
             <span
-              className="reveal reveal-2 font-display text-[1.05rem] font-medium tracking-tight sm:text-[1.2rem]"
-              style={{ fontVariationSettings: "'opsz' 22, 'SOFT' 60" }}
+              className="bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
+              style={{ WebkitBackgroundClip: 'text' }}
             >
               Julie Yue
             </span>
-            <span className="reveal reveal-2 text-[0.85rem] sm:text-[0.95rem] text-ink/75">
-              Austin, TX · @julzcreations
+            .
+            <br />
+            Lately, with{' '}
+            <span className="relative inline-block px-[0.1em]">
+              AI
+              <svg
+                className="absolute -left-[0.25em] -top-[0.3em] h-[calc(100%+0.6em)] w-[calc(100%+0.5em)]"
+                viewBox="0 0 180 120"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M 32 58 C 22 32, 60 11, 102 12 C 148 14, 174 36, 164 68 C 156 100, 112 112, 76 106 C 44 100, 16 86, 28 54"
+                  fill="none"
+                  stroke="var(--amber)"
+                  strokeWidth={3}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  transform="rotate(-3 90 60)"
+                  style={{
+                    strokeDasharray: 600,
+                    strokeDashoffset: 600,
+                    animation: 'drawCircle 1.6s cubic-bezier(0.4, 0, 0.2, 1) 1.1s forwards',
+                    opacity: 0.9,
+                  }}
+                />
+              </svg>
             </span>
-          </nav>
+            .
+          </h1>
 
-          {/* Hero content */}
-          <div>
-            <h1
-              className="reveal reveal-3 mb-9 max-w-[26ch] font-display text-[clamp(2.4rem,6vw,4.8rem)] font-normal leading-[1.05] tracking-tight"
-              style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
-            >
-              Frontend engineer.
-              <br />
-              Five years in ecommerce.
-              <br />
-              Lately, with{' '}
-              <span className="relative inline-block px-[0.1em]">
-                AI
-                <svg
-                  className="absolute -left-[0.25em] -top-[0.3em] h-[calc(100%+0.6em)] w-[calc(100%+0.5em)]"
-                  viewBox="0 0 180 120"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M 32 58 C 22 32, 60 11, 102 12 C 148 14, 174 36, 164 68 C 156 100, 112 112, 76 106 C 44 100, 16 86, 28 54"
-                    fill="none"
-                    stroke="var(--amber)"
-                    strokeWidth={3}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    transform="rotate(-3 90 60)"
-                    style={{
-                      strokeDasharray: 600,
-                      strokeDashoffset: 600,
-                      animation: 'drawCircle 1.6s cubic-bezier(0.4, 0, 0.2, 1) 1.1s forwards',
-                      opacity: 0.9,
-                    }}
-                  />
-                </svg>
-              </span>
-              .
-            </h1>
+          <p className="reveal reveal-3 mb-10 max-w-[58ch] text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink/90">
+            Features, integrations, and reusable UI systems across modern and legacy platforms.
+          </p>
 
-            <p className="reveal reveal-4 mb-10 max-w-[58ch] text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink/90">
-              Features, integrations, and reusable UI systems across modern and legacy platforms.
-            </p>
-
-            <p className="reveal reveal-5 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">
-              <span className="mr-2 inline-block text-[0.85rem] sm:text-[0.95rem] font-semibold uppercase tracking-[0.06em] text-sky">
-                Currently
-              </span>
-              At Galls, I own a few features and a small piece of the architecture on the new BigCommerce Catalyst storefront. Reusable component patterns, the first cross-brand rewards integration, a Makeswift component layer for the migration. After hours, an AI content pipeline that posts daily for about five bucks a month.
-            </p>
-          </div>
+          <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">
+            <span className="mr-2 inline-block text-[0.85rem] sm:text-[0.95rem] font-semibold uppercase tracking-[0.06em] text-sky">
+              Currently
+            </span>
+            At Galls, I&apos;m giving one of our brands, Tactical Gear, a new look and new home on BigCommerce Catalyst.
+          </p>
         </div>
-      </article>
+      </div>
 
       {/* Floating scroll-to-work arrow — pinned to viewport bottom */}
       <div

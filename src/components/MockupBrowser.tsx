@@ -13,7 +13,7 @@ type Props = {
  */
 export default function MockupBrowser({ src, alt, url }: Props) {
   return (
-    <div className="overflow-hidden rounded-lg border-2 border-ink/25 bg-paper">
+    <div className="overflow-hidden rounded-lg border-[3px] border-ink/40 bg-paper">
       {/* Chrome */}
       <div className="flex items-center gap-2 border-b border-ink/10 bg-paper-warm/50 px-3 py-2">
         <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[#fda4af]" />

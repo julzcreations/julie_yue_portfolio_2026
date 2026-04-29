@@ -87,10 +87,10 @@ export default function Hero() {
         {/* Hero content */}
         <div>
           <h1
-            className="reveal reveal-2 mb-9 max-w-[26ch] font-display text-[clamp(2.4rem,6vw,4.8rem)] font-normal leading-[1.05] tracking-tight"
+            className="reveal reveal-2 mb-9 max-w-[20ch] font-display text-[clamp(2.4rem,6vw,4.8rem)] font-normal leading-[1.05] tracking-tight"
             style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
           >
-            Hi. My name is{' '}
+            Hi, I&apos;m{' '}
             <span
               className="bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
               style={{ WebkitBackgroundClip: 'text' }}
@@ -98,38 +98,10 @@ export default function Hero() {
               Julie Yue
             </span>
             .
-            <br />
-            Lately, with{' '}
-            <span className="relative inline-block px-[0.1em]">
-              AI
-              <svg
-                className="absolute -left-[0.25em] -top-[0.3em] h-[calc(100%+0.6em)] w-[calc(100%+0.5em)]"
-                viewBox="0 0 180 120"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M 32 58 C 22 32, 60 11, 102 12 C 148 14, 174 36, 164 68 C 156 100, 112 112, 76 106 C 44 100, 16 86, 28 54"
-                  fill="none"
-                  stroke="var(--amber)"
-                  strokeWidth={3}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  transform="rotate(-3 90 60)"
-                  style={{
-                    strokeDasharray: 600,
-                    strokeDashoffset: 600,
-                    animation: 'drawCircle 1.6s cubic-bezier(0.4, 0, 0.2, 1) 1.1s forwards',
-                    opacity: 0.9,
-                  }}
-                />
-              </svg>
-            </span>
-            .
           </h1>
 
-          <p className="reveal reveal-3 mb-10 max-w-[58ch] text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink/90">
-            Features, integrations, and reusable UI systems across modern and legacy platforms.
+          <p className="reveal reveal-3 mb-10 max-w-[60ch] text-[clamp(1.05rem,1.4vw,1.25rem)] leading-relaxed text-ink/90">
+            I&apos;m a frontend engineer who designs and ships thoughtful UI systems—bringing strong visual taste and a growing focus on AI-powered, human-centered experiences.
           </p>
 
           <p className="reveal reveal-4 max-w-[60ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">

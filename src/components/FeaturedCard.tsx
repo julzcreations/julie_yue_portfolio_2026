@@ -50,21 +50,26 @@ export default function FeaturedCard({ card }: Props) {
         ))}
       </ul>
 
-      {/* Long-form story — collapsed by default. Native <details>, no JS. */}
+      {/* Long-form story — collapsed by default. <details> + grid-rows trick for a smooth animation. */}
       <details className="group mt-3">
         <summary className="cursor-pointer list-none text-[0.85rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.15em] text-sky transition-colors hover:underline">
           <span className="group-open:hidden">Read the story ↓</span>
           <span className="hidden group-open:inline">Hide the story ↑</span>
         </summary>
-        <div className="mt-5 space-y-5 text-[1rem] leading-[1.7] text-ink">
-          <CardSection label="Problem" body={card.problem} />
-          <CardSection label="Approach" body={card.approach} />
-          <CardSection label="Outcome" body={card.outcome} />
-          {card.honestNote ? (
-            <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
-              {card.honestNote}
-            </p>
-          ) : null}
+        {/* Outer wrapper animates grid-template-rows: 0fr → 1fr */}
+        <div className="details-anim">
+          <div className="min-h-0 overflow-hidden">
+            <div className="mt-5 space-y-5 text-[1rem] leading-[1.7] text-ink">
+              <CardSection label="Problem" body={card.problem} />
+              <CardSection label="Approach" body={card.approach} />
+              <CardSection label="Outcome" body={card.outcome} />
+              {card.honestNote ? (
+                <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
+                  {card.honestNote}
+                </p>
+              ) : null}
+            </div>
+          </div>
         </div>
       </details>
 

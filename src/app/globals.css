@@ -106,6 +106,20 @@
     50% { transform: translateY(-6px) scale(1.05); opacity: 1; }
   }
 
+  /* Smooth <details> expand/collapse via grid-template-rows.
+     Closed: 0fr (collapsed). Open: 1fr (full content height).
+     The !important overrides the user-agent rule that hides
+     non-summary children of closed <details> with display:none. */
+  .details-anim {
+    display: grid !important;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 520ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  details[open] > .details-anim {
+    grid-template-rows: 1fr;
+  }
+
   /* Cursor-trail sparkles — 4-point pastel sparkle shape */
   .sparkle {
     position: fixed;

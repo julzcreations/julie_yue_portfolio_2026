@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { FeaturedCard as FeaturedCardData } from '@/content/featured'
+import ExpandableStory from './ExpandableStory'
 
 type Props = {
   card: FeaturedCardData
@@ -50,28 +51,20 @@ export default function FeaturedCard({ card }: Props) {
         ))}
       </ul>
 
-      {/* Long-form story — collapsed by default. <details> + grid-rows trick for a smooth animation. */}
-      <details className="group mt-3">
-        <summary className="cursor-pointer list-none text-[0.85rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.15em] text-sky transition-colors hover:underline">
-          <span className="group-open:hidden">Read the story ↓</span>
-          <span className="hidden group-open:inline">Hide the story ↑</span>
-        </summary>
-        {/* Outer wrapper animates grid-template-rows: 0fr → 1fr */}
-        <div className="details-anim">
-          <div className="min-h-0 overflow-hidden">
-            <div className="mt-5 space-y-5 text-[1rem] leading-[1.7] text-ink">
-              <CardSection label="Problem" body={card.problem} />
-              <CardSection label="Approach" body={card.approach} />
-              <CardSection label="Outcome" body={card.outcome} />
-              {card.honestNote ? (
-                <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
-                  {card.honestNote}
-                </p>
-              ) : null}
-            </div>
-          </div>
+      {/* Long-form story — collapsed by default. React-state driven so both
+          open and close transitions run reliably. */}
+      <ExpandableStory>
+        <div className="mt-5 space-y-5 text-[1rem] leading-[1.7] text-ink">
+          <CardSection label="Problem" body={card.problem} />
+          <CardSection label="Approach" body={card.approach} />
+          <CardSection label="Outcome" body={card.outcome} />
+          {card.honestNote ? (
+            <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
+              {card.honestNote}
+            </p>
+          ) : null}
         </div>
-      </details>
+      </ExpandableStory>
 
       {card.links && card.links.length > 0 ? (
         <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[0.88rem] sm:text-[0.95rem]">

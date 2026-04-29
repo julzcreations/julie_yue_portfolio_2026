@@ -106,29 +106,6 @@
     50% { transform: translateY(-6px) scale(1.05); opacity: 1; }
   }
 
-  /* Smooth <details> expand/collapse via grid-template-rows + opacity.
-     Closed: 0fr collapsed + opacity 0. Open: 1fr + opacity 1.
-     The !important overrides the user-agent rule that hides
-     non-summary children of closed <details>. */
-  .details-anim {
-    display: grid !important;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-    transition: grid-template-rows 600ms cubic-bezier(0.32, 0.72, 0, 1);
-  }
-  details[open] > .details-anim {
-    grid-template-rows: 1fr;
-  }
-  /* Inner content fades in/out alongside the height growth */
-  .details-anim > * {
-    opacity: 0;
-    transition: opacity 380ms ease-out;
-  }
-  details[open] > .details-anim > * {
-    opacity: 1;
-    /* Tiny delay so the height starts opening first, then content fades in */
-    transition: opacity 380ms ease-out 140ms;
-  }
 
   /* Cursor-trail sparkles — 4-point pastel sparkle shape */
   .sparkle {

@@ -76,6 +76,11 @@ export const featuredCards: FeaturedCard[] = [
       'Varify A/B',
       'Vanilla JS / ES6 (no-build)',
     ],
+    image: {
+      src: '/work/galls-d1.avif',
+      alt: 'Galls storefront — integrations + tooling at scale',
+      narrow: true,
+    },
   },
   {
     number: '03',

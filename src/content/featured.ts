@@ -20,7 +20,7 @@ export type FeaturedCard = {
 export const featuredCards: FeaturedCard[] = [
   {
     number: '01',
-    title: 'Swirl Series + IG-Stats MCP',
+    title: 'Swirl Ecosystem + IG-Stats MCP',
     subtitle: 'A daily Claude pipeline for my coffee Instagram, plus the MCP server I wrote so I can think about reels from my phone. Costs me about $5 a month.',
     problem:
       'Cold-started a coffee Instagram. 100 views a reel and no real idea what was working. I wanted a way to figure out what to try next without spending hours guessing. And once the pipeline was running, I kept getting reel ideas away from my desk. I wanted to talk through them with Claude right then, on my phone, with the actual numbers in front of me.',

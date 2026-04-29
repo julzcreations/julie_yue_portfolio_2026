@@ -100,7 +100,7 @@ export default function FeaturedWork() {
 /** Compact tab label */
 function tabLabel(fullTitle: string): string {
   const map: Record<string, string> = {
-    'Swirl Series + IG-Stats MCP': 'Swirl + IG-Stats',
+    'Swirl Ecosystem + IG-Stats MCP': 'Swirl + IG-Stats',
     'Galls Tooling + Integrations': 'Galls Integrations',
     'Galls AI Shopping Drawer': 'AI Drawer',
     'Galls Location Tracker + EDD/EST': 'Location + EDD',

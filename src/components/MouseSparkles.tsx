@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react'
 
 type Sparkle = { id: number; x: number; y: number; size: number; dx: number }
 
-const SPAWN_THROTTLE_MS = 130
+const SPAWN_THROTTLE_MS = 100
 const SPARKLE_LIFE_MS = 900
-const MAX_ACTIVE = 8
+const MAX_ACTIVE = 10
 
 export default function MouseSparkles() {
   const [sparkles, setSparkles] = useState<Sparkle[]>([])
@@ -29,8 +29,8 @@ export default function MouseSparkles() {
         x: e.clientX,
         y: e.clientY,
         // Newest sparkles spawn larger (near the cursor); animation shrinks them as they trail.
-        size: 4 + Math.random() * 5,
-        dx: (Math.random() - 0.5) * 26,
+        size: 6 + Math.random() * 6,
+        dx: (Math.random() - 0.5) * 28,
       }
       setSparkles((prev) => [...prev.slice(-(MAX_ACTIVE - 1)), sparkle])
 

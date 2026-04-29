@@ -1,11 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="12" fill="#0a0e2b"/>
-  <!-- Amber dot accent (brand color) -->
+  <style>
+    .bg { fill: #0a0e2b; }
+    .ink { stroke: #fef9ed; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #fef9ed; }
+      .ink { stroke: #0a0e2b; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="12"/>
+  <!-- Amber dot accent -->
   <circle cx="34" cy="18" r="4" fill="#fcd34d"/>
-  <!-- Hand-drawn j: vertical stem + clean curved hook to the left -->
+  <!-- Hand-drawn j -->
   <path
+    class="ink"
     d="M 34 28 L 34 47 Q 34 54 27 54 Q 20 54 20 47"
-    stroke="#fef9ed"
     stroke-width="6"
     stroke-linecap="round"
     stroke-linejoin="round"

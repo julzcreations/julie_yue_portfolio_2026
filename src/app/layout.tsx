@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Fraunces, Zen_Kaku_Gothic_New } from 'next/font/google'
+import { Fraunces, Zen_Kaku_Gothic_New, Lora } from 'next/font/google'
 import MouseSparkles from '@/components/MouseSparkles'
 import './globals.css'
 
@@ -14,6 +14,13 @@ const zenKaku = Zen_Kaku_Gothic_New({
   subsets: ['latin'],
   variable: '--font-zen-kaku',
   weight: ['300', '400', '500', '700'],
+  display: 'swap',
+})
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -38,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${zenKaku.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${zenKaku.variable} ${lora.variable}`}>
       <body className="font-sans antialiased">
         <MouseSparkles />
         {children}

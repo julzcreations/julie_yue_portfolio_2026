@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-zen-kaku)', 'system-ui', 'sans-serif'],
         display: ['var(--font-fraunces)', 'Georgia', 'serif'],
+        serif: ['var(--font-lora)', 'Georgia', 'serif'],
       },
       colors: {
         // Warm cream backdrop (was cold navy)

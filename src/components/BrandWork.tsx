@@ -6,6 +6,7 @@ type AppTile = {
   href?: string
   image: { src: string; alt: string }
   badge: React.ReactNode
+  badgeBg?: string
 }
 
 const tiles: AppTile[] = [
@@ -14,8 +15,9 @@ const tiles: AppTile[] = [
     caption: 'Latte-art practice app',
     href: 'https://swirlie.julzcreations.com',
     image: { src: '/work/swirlie-pour.png', alt: 'Swirlie pattern selector' },
+    badgeBg: 'bg-[#3d2c24]',
     badge: (
-      <svg viewBox="0 0 68 78" aria-hidden="true">
+      <svg viewBox="0 0 68 78" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
         <rect width="68" height="78" rx="8" fill="#3d2c24" />
         <path
           d="M12 30 C11 29 9 30 9 32 L11 56 C11 60 15 62 20 62 L44 62 C48 62 52 60 52 56 L54 32 C54 30 53 29 52 30 Z"
@@ -145,7 +147,7 @@ export default function BrandWork() {
         {tiles.map((tile) => {
           const inner = (
             <>
-              <MockupMobile src={tile.image.src} alt={tile.image.alt} badge={tile.badge} />
+              <MockupMobile src={tile.image.src} alt={tile.image.alt} badge={tile.badge} badgeBg={tile.badgeBg} />
               <div className="mt-5 text-center">
                 <h3
                   className="font-display text-[1.05rem] font-medium leading-snug"

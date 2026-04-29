@@ -10,15 +10,15 @@ export default function FeaturedCard({ card }: Props) {
     <article className="border-l-2 border-ink/15 py-10 pl-8 transition-colors hover:border-sky/40">
       {card.image ? (
         <div
-          className={`mb-7 overflow-hidden rounded-lg border border-ink/10 bg-paper shadow-sm ${
-            card.image.narrow ? 'aspect-[3/1]' : 'aspect-[16/9]'
+          className={`mb-7 overflow-hidden rounded-lg border border-ink/15 bg-paper ${
+            card.image.narrow ? 'aspect-[6/1]' : 'aspect-[16/9]'
           }`}
         >
           <Image
             src={card.image.src}
             alt={card.image.alt}
             width={1600}
-            height={card.image.narrow ? 533 : 900}
+            height={card.image.narrow ? 267 : 900}
             className="h-full w-full object-cover"
             sizes="(min-width: 1024px) 920px, 92vw"
             priority={card.number === '01'}
@@ -26,8 +26,10 @@ export default function FeaturedCard({ card }: Props) {
         </div>
       ) : null}
 
-      <header className="mb-6 flex items-baseline gap-4">
-        <span className="text-[0.85rem] sm:text-[0.92rem] uppercase tracking-[0.2em] text-ink/75">{card.number}</span>
+      <header className="mb-5 flex items-baseline gap-4">
+        <span className="text-[0.85rem] sm:text-[0.92rem] uppercase tracking-[0.2em] text-ink/75">
+          {card.number}
+        </span>
         <div>
           <h3
             className="font-display text-[clamp(1.4rem,2.2vw,1.85rem)] font-medium leading-tight"
@@ -39,24 +41,32 @@ export default function FeaturedCard({ card }: Props) {
         </div>
       </header>
 
-      <div className="space-y-5 text-[1rem] leading-[1.7] text-ink">
-        <CardSection label="Problem" body={card.problem} />
-        <CardSection label="Approach" body={card.approach} />
-        <CardSection label="Outcome" body={card.outcome} />
-        {card.honestNote ? (
-          <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
-            {card.honestNote}
-          </p>
-        ) : null}
-      </div>
-
-      <ul className="mt-7 flex flex-wrap gap-x-3 gap-y-1.5 text-[0.85rem] sm:text-[0.92rem] text-ink/85">
+      {/* Stack pills — always visible */}
+      <ul className="mb-4 flex flex-wrap gap-x-3 gap-y-1.5 text-[0.85rem] sm:text-[0.92rem] text-ink/85">
         {card.stack.map((item) => (
           <li key={item} className="rounded-full border border-ink/20 px-2.5 py-0.5">
             {item}
           </li>
         ))}
       </ul>
+
+      {/* Long-form story — collapsed by default. Native <details>, no JS. */}
+      <details className="group mt-3">
+        <summary className="cursor-pointer list-none text-[0.85rem] sm:text-[0.92rem] font-semibold uppercase tracking-[0.15em] text-sky transition-colors hover:underline">
+          <span className="group-open:hidden">Read the story ↓</span>
+          <span className="hidden group-open:inline">Hide the story ↑</span>
+        </summary>
+        <div className="mt-5 space-y-5 text-[1rem] leading-[1.7] text-ink">
+          <CardSection label="Problem" body={card.problem} />
+          <CardSection label="Approach" body={card.approach} />
+          <CardSection label="Outcome" body={card.outcome} />
+          {card.honestNote ? (
+            <p className="border-l-2 border-amber/60 pl-4 text-[0.9rem] sm:text-[1rem] italic text-ink/85">
+              {card.honestNote}
+            </p>
+          ) : null}
+        </div>
+      </details>
 
       {card.links && card.links.length > 0 ? (
         <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[0.88rem] sm:text-[0.95rem]">

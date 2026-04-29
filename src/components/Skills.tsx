@@ -1,5 +1,3 @@
-import { skillCategories } from '@/content/skills'
-
 export default function Skills() {
   return (
     <section
@@ -8,46 +6,23 @@ export default function Skills() {
       aria-label="Skills"
     >
       <h2
-        className="mb-16 font-display text-[clamp(1.75rem,3vw,2.5rem)] font-medium leading-tight"
+        className="mb-8 font-display text-[clamp(1.75rem,3vw,2.5rem)] font-medium leading-tight"
         style={{ fontVariationSettings: "'opsz' 60, 'SOFT' 80" }}
       >
         Skills
       </h2>
-
-      {/* Category cards */}
-      <div className="grid gap-10 md:grid-cols-2">
-        {skillCategories.map((cat) => (
-          <article
-            key={cat.title}
-            className="border-l-2 border-ink/15 pl-7"
-          >
-            <h3
-              className="mb-2 font-display text-[1.15rem] font-medium leading-snug"
-              style={{ fontVariationSettings: "'opsz' 30, 'SOFT' 80" }}
-            >
-              {cat.title}
-            </h3>
-            <p className="mb-4 text-[0.92rem] leading-relaxed text-ink/90">{cat.blurb}</p>
-            <ul className="mb-4 flex flex-wrap gap-x-2.5 gap-y-1.5 text-[0.85rem] sm:text-[0.92rem] text-ink/85">
-              {cat.items.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-full border border-ink/20 px-2.5 py-0.5"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-[0.85rem] sm:text-[0.92rem] italic leading-relaxed text-ink/75">
-              <span className="font-semibold not-italic uppercase tracking-[0.12em] text-ink/85">
-                Proof —{' '}
-              </span>
-              {cat.proof}
-            </p>
-          </article>
-        ))}
-      </div>
-
+      <p className="max-w-[64ch] text-[1.05rem] leading-[1.75] text-ink/90">
+        Five years across modern (Next.js 14, React 18, TypeScript, Tailwind, Cloudflare
+        Workers + Durable Objects, Vercel, Prisma + Neon) and legacy (Vanilla JS + BEM at
+        scale, Ember, Bootstrap, WordPress, PHP, Apps Script) stacks. AI work runs on the
+        Anthropic and OpenAI SDKs with multi-model orchestration, MCP servers I author and
+        integrate, and Algolia Agent Studio. Ecommerce: BigCommerce + Catalyst + Makeswift,
+        Shopify, Algolia, Bazaarvoice, Bluecore, Attentive, Optimove, GA4, ParcelLab, Varify
+        A/B. Quality and craft: Chrome DevTools, Lighthouse, PageSpeed, Core Web Vitals,
+        UsableNet a11y audits, JUnit + regression, semantic HTML + ARIA, responsive UI.
+        Mobile: Expo / React Native. Design tooling: Figma. App Store ship credit on Closet
+        Stories.
+      </p>
     </section>
   )
 }

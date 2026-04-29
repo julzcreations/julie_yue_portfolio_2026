@@ -116,7 +116,7 @@ export default function Hero() {
           </div>
 
           {/* Right column — headshot */}
-          <div className="reveal reveal-2 w-full max-w-[320px] flex-shrink-0 sm:max-w-[380px] lg:w-[380px]">
+          <div className="reveal reveal-2 w-full max-w-[320px] flex-shrink-0 self-center sm:max-w-[380px] lg:w-[380px] lg:self-center">
             <div className="overflow-hidden rounded-2xl border border-ink/10 bg-paper">
               <Image
                 src="/work/julie_yue_headshot.png"

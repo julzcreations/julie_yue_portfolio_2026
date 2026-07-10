@@ -90,21 +90,16 @@ export default function Hero() {
           {/* Left column — text */}
           <div className="flex-1">
             <h1
-              className="reveal reveal-2 mb-9 max-w-[20ch] font-display text-[clamp(2.4rem,5.5vw,4.4rem)] font-normal leading-[1.05] tracking-tight"
+              className="reveal reveal-2 mb-9 max-w-[16ch] font-display text-[clamp(2.4rem,5.5vw,4.4rem)] font-normal leading-[1.05] tracking-tight"
               style={{ fontVariationSettings: "'opsz' 144, 'SOFT' 80, 'WONK' 0" }}
             >
-              Hi, I&apos;m{' '}
-              <span
-                className="font-serif bg-gradient-to-r from-[#a78bfa] via-[#c084fc] to-[#ec4899] bg-clip-text text-transparent"
-                style={{ WebkitBackgroundClip: 'text', fontWeight: 400 }}
-              >
-                Julie Yue
-              </span>
-              .
+              Engineer who ships with{' '}
+              <span className="font-serif italic text-accent-navy">AI</span>
+              , not around it.
             </h1>
 
             <p className="reveal reveal-3 mb-10 max-w-[58ch] text-[clamp(1.05rem,1.3vw,1.2rem)] leading-relaxed text-ink/90">
-              I&apos;m a frontend engineer who designs and ships thoughtful UI systems—bringing strong visual taste and a growing focus on AI-powered, human-centered experiences.
+              Product-minded frontend engineer in Austin. Five years shipping production e-commerce, the last two building with AI. I design the systems and direct the agents that implement them.
             </p>
 
             <p className="reveal reveal-4 max-w-[58ch] border-l-2 border-sky pl-6 text-[1.05rem] font-normal leading-[1.7] text-ink">
